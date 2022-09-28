@@ -482,6 +482,11 @@ header .navbar-brand {
     padding: 3rem 2rem;
   }
 }
+@media screen and (max-width: 991px) {
+  .fields {
+    padding: 1rem !important;
+  }
+}
 @media (max-width: 991px) {
   .fields .tab-content > .tab-pane {
     display: block;
@@ -550,6 +555,11 @@ header .navbar-brand {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+@media screen and (max-width: 991px) {
+  .fields #myTabContent .accordion-item .accordion-body {
+    padding: 0.5rem !important;
+  }
 }
 .fields #myTabContent .accordion-item .accordion-body::before {
   content: "";
@@ -629,6 +639,11 @@ header .navbar-brand {
 @media screen and (max-width: 1440px) {
   .demsa-current {
     padding: 3rem 2rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .demsa-current {
+    padding: 1rem !important;
   }
 }
 .demsa-current .title {
@@ -772,6 +787,11 @@ header .navbar-brand {
     padding: 2rem 1rem;
   }
 }
+@media screen and (max-width: 991px) {
+  .demsa-holding {
+    padding: 1rem;
+  }
+}
 .demsa-holding .title {
   position: relative;
   margin-bottom: 2rem;
@@ -828,6 +848,11 @@ header .navbar-brand {
 @media screen and (max-width: 1440px) {
   .our-projects {
     padding: 3rem 2rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .our-projects {
+    padding: 1rem !important;
   }
 }
 .our-projects .content h6 {
@@ -998,6 +1023,11 @@ header .navbar-brand {
     padding: 2rem 2rem 0rem 2rem;
   }
 }
+@media screen and (max-width: 991px) {
+  .demsa-career {
+    padding: 1rem;
+  }
+}
 .demsa-career::before {
   content: "";
   width: 100%;
@@ -1112,6 +1142,11 @@ footer .footer-top {
     padding: 6rem 5rem 5rem 5rem;
   }
 }
+@media screen and (max-width: 991px) {
+  footer .footer-top {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+}
 footer .footer-top .text p {
   color: var(--text-color);
   font-size: 1rem;
@@ -1193,6 +1228,17 @@ footer .copyright {
   background-color: var(--color-red);
   padding: 1rem 10rem 1rem 10rem;
   color: var(--color-white);
+}
+@media screen and (max-width: 991px) {
+  footer .copyright {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  footer .copyright .col-lg-6 {
+    justify-content: center !important;
+    text-align: center;
+  }
 }
 footer .copyright span {
   color: var(--color-white);

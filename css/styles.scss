@@ -54,6 +54,9 @@ a {
     @media screen and(max-width:1440px) {
         padding: 3rem 2rem;
     }
+    @media screen and(max-width:$lg-breakpoint) {
+        padding: 1rem !important;
+    }
 }
 
 header {
@@ -635,6 +638,9 @@ header {
                 align-items: center;
                 flex-direction: column;
 
+                @media screen and(max-width:$lg-breakpoint) {
+                    padding: 0.5rem !important;
+                }
                 &::before {
                     content: "";
                     height: 5rem;
@@ -876,6 +882,10 @@ header {
 
     @media screen and(max-width:1440px) {
         padding: 2rem 1rem;
+    }
+
+    @media screen and(max-width:$lg-breakpoint) {
+        padding: 1rem;
     }
     .title {
         position: relative;
@@ -1130,6 +1140,10 @@ header {
         padding: 2rem 2rem 0rem 2rem;
     }
 
+    @media screen and(max-width:$lg-breakpoint) {
+        padding: 1rem;
+    }
+
     &::before {
         content: "";
         width: 100%;
@@ -1248,6 +1262,9 @@ footer {
         @media screen and(max-width:1440px) {
             padding: 6rem 5rem 5rem 5rem;
         }
+        @media screen and(max-width:$lg-breakpoint) {
+            padding: 2rem 1rem 2rem 1rem;
+        }
 
         .text {
             p {
@@ -1354,7 +1371,16 @@ footer {
         background-color: var(--color-red);
         padding: 1rem 10rem 1rem 10rem;
         color: var(--color-white);
+        @media screen and(max-width:$lg-breakpoint) {
+            padding: 1rem;
+        }
 
+        .col-lg-6 {
+            @media screen and(max-width:$lg-breakpoint) {
+                justify-content: center !important;
+                text-align: center;
+            }
+        }
         span {
             color: var(--color-white);
             font-size: 0.9rem;
