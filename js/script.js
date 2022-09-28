@@ -1,56 +1,3 @@
-function inVisible(element) {
-    //Checking if the element is
-    //visible in the viewport
-    var WindowTop = $(window).scrollTop();
-    var WindowBottom = WindowTop + $(window).height();
-    var ElementTop = element.offset().top;
-    var ElementBottom = ElementTop + element.height();
-    //animating the element if it is
-    //visible in the viewport
-    if (ElementBottom <= WindowBottom && ElementTop >= WindowTop)
-      animate(element);
-  }
-  
-  //When the document is ready
-  $(function () {
-    //This is triggered when the
-    //user scrolls the page
-    $(window).scroll(function () {
-      //Checking if each items to animate are
-      //visible in the viewport
-      $("h2[data-max]").each(function () {
-        inVisible($(this));
-      });
-    });
-  });
-  
-  function animate(element) {
-    //Animating the element if not animated before
-    if (!element.hasClass("ms-animated")) {
-      var maxval = element.data("max");
-      var html = element.html();
-      element.addClass("ms-animated");
-      $({
-        countNum: element.html(),
-      }).animate(
-        {
-          countNum: maxval,
-        },
-        {
-          //duration 5 seconds
-          duration: 1000,
-          easing: "linear",
-          step: function () {
-            element.html(Math.floor(this.countNum) + html);
-          },
-          complete: function () {
-            element.html(this.countNum + html);
-          },
-        }
-      );
-    }
-  }
-  
 
 
 const menuToggle = document.querySelector(".menu-toggle");
@@ -182,7 +129,64 @@ $(".mega-menu .sub-item .dropdown-item").on("mouseover", function () {
 });
 /* ------------------------------------------------------------- */
 
-var rect = $("#container")[0].getBoundingClientRect();
+
+function inVisible(element) {
+  //Checking if the element is
+  //visible in the viewport
+  var WindowTop = $(window).scrollTop();
+  var WindowBottom = WindowTop + $(window).height();
+  var ElementTop = element.offset().top;
+  var ElementBottom = ElementTop + element.height();
+  //animating the element if it is
+  //visible in the viewport
+  if (ElementBottom <= WindowBottom && ElementTop >= WindowTop)
+    animate(element);
+}
+
+//When the document is ready
+$(function () {
+  //This is triggered when the
+  //user scrolls the page
+  $(window).scroll(function () {
+    //Checking if each items to animate are
+    //visible in the viewport
+    $("h2[data-max]").each(function () {
+      inVisible($(this));
+    });
+  });
+});
+
+function animate(element) {
+  //Animating the element if not animated before
+  if (!element.hasClass("ms-animated")) {
+    var maxval = element.data("max");
+    var html = element.html();
+    element.addClass("ms-animated");
+    $({
+      countNum: element.html(),
+    }).animate(
+      {
+        countNum: maxval,
+      },
+      {
+        //duration 5 seconds
+        duration: 1000,
+        easing: "linear",
+        step: function () {
+          element.html(Math.floor(this.countNum) + html);
+        },
+        complete: function () {
+          element.html(this.countNum + html);
+        },
+      }
+    );
+  }
+}
+
+
+
+
+/* var rect = $("#container")[0].getBoundingClientRect();
   var mouse = { x: 0, y: 0, moved: false };
 
   $("#container").mousemove(function (e) {
@@ -194,8 +198,8 @@ var rect = $("#container")[0].getBoundingClientRect();
   // Ticker event will be called on every frame
   TweenLite.ticker.addEventListener("tick", function () {
     if (mouse.moved) {
-      parallaxIt(".slide", 200);
-      parallaxIt("img", -20);
+      parallaxIt(".slide", 50);
+      parallaxIt(".move-img", -100);
     }
     mouse.moved = false;
   });
@@ -209,4 +213,4 @@ var rect = $("#container")[0].getBoundingClientRect();
 
   $(window).on("resize scroll", function () {
     rect = $("#container")[0].getBoundingClientRect();
-  });
+  }); */
