@@ -20,7 +20,7 @@
                 <nav class="navbar navbar-expand-lg d-flex align-items-center justify-content-between">
                     <!--  justify-content-between -->
                     <a class="navbar-brand" href="index.html">
-                        <img class="img-fluid" src="./img/logo.png" alt="">
+                        <img class="img-fluid logo" src="./img/logo.png" alt="">
                     </a>
 
                     <div class="wrapper">
@@ -39,37 +39,41 @@
                                 </li>
                                 <li class="nav-item dropdown" data-bs-toggle="navbarDropdown" aria-expanded="false">
 
-                                    <a class="nav-link dropdown-toggle" href="#"> Kurumsal </a>
-
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Kurumsal<i class="fa-sharp fa-solid fa-chevron-down"></i>
+                                    </a>
+                                   <!--  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Lorem Ipsum</a></li>
+                                        <li><a class="dropdown-item" href="#">Lorem Ipsum</a></li>
+                                        <li><a class="dropdown-item" href="#">Lorem Ipsum</a></li>
+                                    </ul> -->
                                 </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="services.html" id="defaultDropdown">
-                                        Hizmetlerimiz
+                                <li class="nav-item dropdown mega-dropdown" data-bs-toggle="navbarDropdown" aria-expanded="false">
+
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Hizmetlerimiz<i class="fa-sharp fa-solid fa-chevron-down"></i>
                                     </a>
                                     <div class="dropdown-menu mega-menu" aria-labelledby="defaultDropdown">
                                         <div class="row">
-                                            <div class="col-lg-4 d-lg-block d-none">
+                                            <div class="col-xl-4 d-xl-block d-none">
                                                 <div class="img-wrapper h-100">
                                                     <img src="./img/hizmetler.jpg" class="img-fluid" alt="">
                                                 </div>
                                             </div>
-                                            <div class="col-lg-8">
+                                            <div class="col-xl-8">
                                                 <ul class="sub-item">
-                                                    <li class="dropdown-item" data-image="./img/hizmetler.jpg"><a href="before-after.html">Finans Hizmetleri</a></li>
-                                                    <li class="dropdown-item" data-image="./img/img2.jpg"><a href="service-detail.html">Lojistik Hizmetleri</a>
+                                                    <li class="dropdown-item" data-image="./img/hizmetler.jpg"><a href="before-after.html">Finans Hizmetleri</a> <i class="fa-sharp fa-solid fa-chevron-right"></i></li>
+                                                    <li class="dropdown-item" data-image="./img/img2.jpg"><a href="service-detail.html">Lojistik Hizmetleri</a><i class="fa-sharp fa-solid fa-chevron-right"></i>
                                                     </li>
-                                                    <li class="dropdown-item" data-image="./img/hizmetler.jpg"><a href="#">Otomativ Hizmetleri</a>
+                                                    <li class="dropdown-item" data-image="./img/hizmetler.jpg"><a href="#">Otomativ Hizmetleri</a><i class="fa-sharp fa-solid fa-chevron-right"></i>
                                                     </li>
                                                     <li class="dropdown-item" data-image="./img/img2.jpg"><a href="#">Akaryakıt ve Enerji Hizmetleri
-                                                        </a>
+                                                        </a><i class="fa-sharp fa-solid fa-chevron-right"></i>
                                                     </li>
-                                                    <li class="dropdown-item" data-image="./img/img2.jpg"><a href="#">Gayrimenkul Hizmetleri </a></li>
-                                                    <li class="dropdown-item" data-image="./img/hizmetler.jpg"><a href="#">Turizm ve Otelcilik </a></li>
-                                                    <li class="dropdown-item" data-image="./img/img2.jpg"> <a href="#">Sağlık Hizmetleri </a></li>
-  
-    
-    
+                                                    <li class="dropdown-item" data-image="./img/img2.jpg"><a href="#">Gayrimenkul Hizmetleri </a><i class="fa-sharp fa-solid fa-chevron-right"></i></li>
+                                                    <li class="dropdown-item" data-image="./img/hizmetler.jpg"><a href="#">Turizm ve Otelcilik </a><i class="fa-sharp fa-solid fa-chevron-right"></i></li>
+                                                    <li class="dropdown-item" data-image="./img/img2.jpg"> <a href="#">Sağlık Hizmetleri </a><i class="fa-sharp fa-solid fa-chevron-right"></i></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -78,86 +82,91 @@
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="blog.html">Haberler</a>
+                                    <a class="nav-link" aria-current="page" href="blog.html">Haberler <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="blog.html">Projeler</a>
+                                    <a class="nav-link" aria-current="page" href="blog.html">Projeler <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="contact.html">İletişim</a>
+                                    <a class="nav-link" aria-current="page" href="contact.html">İletişim <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
                                 </li>
                             </ul>
 
                         </div>
                     </div>
-                    <div class=" d-flex align-items-center gap-3">
+                    <div class=" d-lg-flex align-items-center gap-3 d-none">
 
                         <div class="language">
-                            <span>ING</span>
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    ING
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">TR</a></li>
+
+                                </ul>
+                            </div>
                         </div>
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <div class="search">
+                            <i class=" fa-solid fa-magnifying-glass"></i>
+                        </div>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
     <section class="banner">
-        <div>
-            <div class="swiper mySwiperBanner">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide slide-item" style="background:url(./img/demsa-holding-banner.jpg) no-repeat; background-size: cover; background-position: center; ">
-                        <div class="container text-start">
-                            <div class="content">
-                                <h1>
-                                    Bizi Bugüne Taşıyan Değelerimizle
-                                    Geleceğe Doğru Yürüyoruz.
-                                </h1>
-                                <div class="text">
-                                    <p>
-                                        Bugün dünyanın 5 kıtasında ve 31 ülkesinde enerji, inşaat, madencilik, finans, tekstil ve dijital alanlarında faaliyet gösteren Çalık Holding, başarılı ve inovatif iş modelleri geliştirmekte ve odaklandığı iş
-                                        alanlarında sürdürülebilir büyüme sağlayarak ilerlemektedir.
-                                    </p>
-                                </div>
-                            </div>
-                        
-                        </div>
-                    </div>
-                    <div class="swiper-slide slide-item" style="background:url(./img/demsa-holding-banner.jpg) no-repeat; background-size: cover; background-position: center; ">
-                        <div class="container text-start">
-                            <div class="content">
-                                <h1>
-                                    Bizi Bugüne Taşıyan Değelerimizle
-                                    Geleceğe Doğru Yürüyoruz.
-                                </h1>
-                                <div class="text">
-                                    <p>
-                                        Bugün dünyanın 5 kıtasında ve 31 ülkesinde enerji, inşaat, madencilik, finans, tekstil ve dijital alanlarında faaliyet gösteren Çalık Holding, başarılı ve inovatif iş modelleri geliştirmekte ve odaklandığı iş
-                                        alanlarında sürdürülebilir büyüme sağlayarak ilerlemektedir.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="navigate-area w-100 text-center d-flex align-items-center justify-content-center">
-                                <div id="fraction" class="swiper-fraction"></div>
-                                <div class="swiper-button-prev" id="swiper-button-prev1"></div>
-                                
-                                <div class="swiper-button-next" id="swiper-button-next1"></div>
+        <div class="swiper mySwiperBanner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide-item" style="background:url(./img/demsa-holding-banner.jpg) no-repeat; background-size: cover; background-position: center; ">
+                    <div class="container text-start">
+                        <div class="content">
+                            <h1>
+                                Bizi Bugüne Taşıyan Değelerimizle
+                                Geleceğe Doğru Yürüyoruz.
+                            </h1>
+                            <div class="text">
+                                <p>
+                                    Bugün dünyanın 5 kıtasında ve 31 ülkesinde enerji, inşaat, madencilik, finans, tekstil ve dijital alanlarında faaliyet gösteren Çalık Holding, başarılı ve inovatif iş modelleri geliştirmekte ve odaklandığı iş
+                                    alanlarında sürdürülebilir büyüme sağlayarak ilerlemektedir.
+                                </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
-               
+                <div class="swiper-slide slide-item" style="background:url(./img/demsa-holding-banner.jpg) no-repeat; background-size: cover; background-position: center; ">
+                    <div class="container text-start">
+                        <div class="content">
+                            <h1>
+                                test
+                            </h1>
+                            <div class="text">
+                                <p>
+                                    Bugün dünyanın 5 kıtasında ve 31 ülkesinde enerji, inşaat, madencilik, finans, tekstil ve dijital alanlarında faaliyet gösteren Çalık Holding, başarılı ve inovatif iş modelleri geliştirmekte ve odaklandığı iş
+                                    alanlarında sürdürülebilir büyüme sağlayarak ilerlemektedir.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <div class="navigate-area w-100 text-center d-flex align-items-center justify-content-start">
-                <div class="swiper-button-prev" id="swiper-button-prev1"></div>
-                <div id="fraction" class="swiper-fraction"></div>
-                <div class="swiper-button-next" id="swiper-button-next1"></div>
+            <div class="container">
+                <div class="navigate-area w-100 text-center d-flex align-items-center justify-content-start">
+
+                    <div id="fraction" class="swiper-fraction"></div>
+                    <div class="swiper-button-prev" id="swiper-button-prev1"></div>
+
+                    <div class="swiper-button-next" id="swiper-button-next1"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="fields">
         <div class="container-fluid" id="container">
-          
+
             <ul class="nav nav-tabs justify-content-center d-none d-lg-flex" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Finans Hizmetleri</button>
@@ -200,21 +209,21 @@
                                             <div class="img-area d-flex align-items-start">
                                                 <div class="d-flex flex-column  ">
                                                     <div class="d-flex align-items-end ">
-                                                        <img src="./img/layer1.jpg" class="img-fluid move-img " alt="" style="margin-left: 1rem; margin-right: 0.5rem;">
-                                                        <img src="./img/img1.jpg" class="img-fluid move-img" alt="">
+                                                        <img src="./img/layer1.jpg" class="img-fluid move-img1 " alt="" style="margin-left: 1rem; margin-right: 0.5rem;">
+                                                        <img src="./img/img1.jpg" class="img-fluid move-img2" alt="">
                                                     </div>
                                                     <div class="d-flex align-items-start " style="margin-top: 1rem">
-                                                        <img src="./img/img3.jpg" class="img-fluid move-img" alt="">
-                                                        <img src="./img/img4.jpg" class="img-fluid move-img" alt="" style="margin-left: 1rem">
+                                                        <img src="./img/img3.jpg" class="img-fluid move-img3" alt="">
+                                                        <img src="./img/img4.jpg" class="img-fluid move-img4" alt="" style="margin-left: 1rem">
 
                                                     </div>
                                                 </div>
                                                 <div style="margin-left: -3rem;">
-                                                    <img src="./img/img2.jpg" class="img-fluid move-img" alt="" style="margin-top: -1.2rem; margin-bottom: 1rem; margin-left: 0.5rem;">
+                                                    <img src="./img/img2.jpg" class="img-fluid move-img8" alt="" style="margin-top: -1.2rem; margin-bottom: 1rem; margin-left: 0.5rem;">
                                                     <div class="d-flex align-items-start position-relative">
-                                                        <img src="./img/layer2.jpg" class="img-fluid move-img" alt="" style=" max-width: 3rem; margin-right: 0.5rem; margin-left: 0.5rem;">
-                                                        <img src="./img/img5.jpg" class="img-fluid move-img" alt="">
-                                                        <img src="./img/layer3.png" class="img-fluid move-img" alt="" style="
+                                                        <img src="./img/layer2.jpg" class="img-fluid move-img5" alt="" style=" max-width: 3rem; margin-right: 0.5rem; margin-left: 0.5rem;">
+                                                        <img src="./img/img5.jpg" class="img-fluid move-img6" alt="">
+                                                        <img src="./img/layer3.png" class="img-fluid move-img7" alt="" style="
                                                 position: absolute;
                                                 right: 0;
                                                 bottom: -3rem;
@@ -626,7 +635,7 @@
                                 <div class="content-info">
                                     <div class="title-area">
                                         <i class="fa-solid fa-plus"></i>
-                                        <h2 data-max="42"></h2>
+                                        <h2>42</h2>
                                     </div>
                                 </div>
                                 <div class="item-text">
@@ -645,7 +654,7 @@
                                 <div class="content-info">
                                     <div class="title-area">
                                         <i class="fa-solid fa-plus"></i>
-                                        <h2 data-max="120"></h2>
+                                        <h2>120</h2>
                                     </div>
                                 </div>
                                 <div class="item-text">
@@ -665,7 +674,7 @@
                                 <div class="content-info">
                                     <div class="title-area">
                                         <i class="fa-solid fa-plus"></i>
-                                        <h2 data-max="600"></h2>
+                                        <h2>600</h2>
                                     </div>
                                 </div>
                                 <div class="item-text">
@@ -684,7 +693,7 @@
                                 <div class="content-info">
                                     <div class="title-area">
                                         <i class="fa-solid fa-plus"></i>
-                                        <h2 data-max="150"></h2>
+                                        <h2>150</h2>
                                     </div>
                                 </div>
                                 <div class="item-text">
@@ -703,7 +712,7 @@
                                 <div class="content-info">
                                     <div class="title-area">
                                         <i class="fa-solid fa-plus"></i>
-                                        <h2 data-max="900"></h2>
+                                        <h2>900</h2>
                                     </div>
                                 </div>
                                 <div class="item-text">
@@ -722,7 +731,7 @@
                                 <div class="content-info">
                                     <div class="title-area">
                                         <i class="fa-solid fa-plus"></i>
-                                        <h2 data-max="900"></h2>
+                                        <h2>900</h2>
                                     </div>
                                 </div>
                                 <div class="item-text">

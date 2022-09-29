@@ -1,5 +1,3 @@
-
-
 const menuToggle = document.querySelector(".menu-toggle");
 const wrapper = document.querySelector(".wrapper");
 const navigation = document.querySelector(".menu-area");
@@ -28,12 +26,11 @@ document.addEventListener("scroll", function () {
   }
 });
 
-
 const fraction = document.getElementById("fraction");
 const slides = document.querySelectorAll(".slide-item");
 const slideCount = slides.length;
 console.log("iki", slideCount);
-fraction.innerHTML = `<span class="start-count"> 01 /</span> <span class="counter-length">0${slideCount}</span>`;
+fraction.innerHTML = `<span class="start-count"> 01</span> <span class="counter-length">0${slideCount}</span>`;
 var swiperBanner = new Swiper(".mySwiperBanner", {
   navigation: {
     nextEl: "#swiper-button-next1",
@@ -44,7 +41,7 @@ var swiperBanner = new Swiper(".mySwiperBanner", {
     slideChange: () => {
       fraction.innerHTML = `<span class="start-count">0${
         swiperBanner.realIndex + 1
-      }</span> <span class="counter-length">/0${slideCount}</span>`;
+      }</span> <span class="counter-length">0${slideCount}</span>`;
     },
   },
 });
@@ -87,11 +84,14 @@ var swiper = new Swiper(".mySwiperNews", {
   },
   breakpoints: {
     640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+      slidesPerView: 1,
+      spaceBetween: 5,
+      grid: {
+        rows: 2,
+      },
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 30,
       grid: {
         rows: 2,
@@ -130,87 +130,38 @@ $(".mega-menu .sub-item .dropdown-item").on("mouseover", function () {
 /* ------------------------------------------------------------- */
 
 
-function inVisible(element) {
-  //Checking if the element is
-  //visible in the viewport
-  var WindowTop = $(window).scrollTop();
-  var WindowBottom = WindowTop + $(window).height();
-  var ElementTop = element.offset().top;
-  var ElementBottom = ElementTop + element.height();
-  //animating the element if it is
-  //visible in the viewport
-  if (ElementBottom <= WindowBottom && ElementTop >= WindowTop)
-    animate(element);
-}
+var rect = $("#container")[0].getBoundingClientRect();
+var mouse = { x: 0, y: 0, moved: false };
 
-//When the document is ready
-$(function () {
-  //This is triggered when the
-  //user scrolls the page
-  $(window).scroll(function () {
-    //Checking if each items to animate are
-    //visible in the viewport
-    $("h2[data-max]").each(function () {
-      inVisible($(this));
-    });
-  });
+$("#container").mousemove(function (e) {
+  mouse.moved = true;
+  mouse.x = e.clientX - rect.left;
+  mouse.y = e.clientY - rect.top;
 });
 
-function animate(element) {
-  //Animating the element if not animated before
-  if (!element.hasClass("ms-animated")) {
-    var maxval = element.data("max");
-    var html = element.html();
-    element.addClass("ms-animated");
-    $({
-      countNum: element.html(),
-    }).animate(
-      {
-        countNum: maxval,
-      },
-      {
-        //duration 5 seconds
-        duration: 1000,
-        easing: "linear",
-        step: function () {
-          element.html(Math.floor(this.countNum) + html);
-        },
-        complete: function () {
-          element.html(this.countNum + html);
-        },
-      }
-    );
+// Ticker event will be called on every frame
+TweenLite.ticker.addEventListener("tick", function () {
+  if (mouse.moved) {
+    parallaxIt(".slide", 50);
+    parallaxIt(".move-img1", -30);
+    parallaxIt(".move-img2", 20);
+    parallaxIt(".move-img3", -50);
+    parallaxIt(".move-img4", 30);
+    parallaxIt(".move-img5", -20);
+    parallaxIt(".move-img6", 50);
+    parallaxIt(".move-img7", -50);
+    parallaxIt(".move-img8", -50);
   }
+  mouse.moved = false;
+});
+
+function parallaxIt(target, movement) {
+  TweenMax.to(target, 0.3, {
+    x: ((mouse.x - rect.width / 2) / rect.width) * movement,
+    y: ((mouse.y - rect.height / 2) / rect.height) * movement,
+  });
 }
 
-
-
-
-/* var rect = $("#container")[0].getBoundingClientRect();
-  var mouse = { x: 0, y: 0, moved: false };
-
-  $("#container").mousemove(function (e) {
-    mouse.moved = true;
-    mouse.x = e.clientX - rect.left;
-    mouse.y = e.clientY - rect.top;
-  });
-
-  // Ticker event will be called on every frame
-  TweenLite.ticker.addEventListener("tick", function () {
-    if (mouse.moved) {
-      parallaxIt(".slide", 50);
-      parallaxIt(".move-img", -100);
-    }
-    mouse.moved = false;
-  });
-
-  function parallaxIt(target, movement) {
-    TweenMax.to(target, 0.3, {
-      x: ((mouse.x - rect.width / 2) / rect.width) * movement,
-      y: ((mouse.y - rect.height / 2) / rect.height) * movement,
-    });
-  }
-
-  $(window).on("resize scroll", function () {
-    rect = $("#container")[0].getBoundingClientRect();
-  }); */
+$(window).on("resize scroll", function () {
+  rect = $("#container")[0].getBoundingClientRect();
+});

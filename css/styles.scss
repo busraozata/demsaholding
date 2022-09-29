@@ -70,13 +70,25 @@ header {
     padding: 5rem 5rem;
 
     @media screen and(max-width:1440px) {
-        padding: 8rem 1rem;
+        padding: 6rem 2rem;
 
         &.bg-color {
             background-color: var(--color-white);
-
+            .logo {
+                filter: invert(9);
+            }
+            .search {
+                i {
+                    color: var(--color-black);
+                }
+            }
             .menu-toggle {
                 i {
+                    color: var(--color-black);
+                }
+            }
+            .language {
+                button {
                     color: var(--color-black);
                 }
             }
@@ -88,16 +100,30 @@ header {
     }
 
     &.header_scroll {
-        background-color: var(--color-black);
-        padding: 4rem 1rem;
+        background-color: var(--color-white);
+        padding: 3rem 2rem;
 
         @media screen and(max-width:$xl-breakpoint) {
             padding: 4rem 0.5rem;
         }
 
-        .nav-link {
-            padding: 2.8rem 1.5rem !important;
+        @media screen and(max-width:$sm-breakpoint) {
+            padding: 3rem 0.5rem;
+        }
 
+        .logo {
+            filter: invert(9);
+            @media screen and(max-width:1440px) {
+                max-width: 10rem;
+            }
+            @media screen and(max-width:$lg-breakpoint) {
+                max-width: 8rem;
+            }
+        }
+
+        .nav-link {
+            padding: 2rem 1.5rem !important;
+            color: var(--color-black) !important;
             @media screen and(max-width:1440px) {
                 padding: 0.5rem 1rem !important;
             }
@@ -107,20 +133,22 @@ header {
             }
         }
 
-        a,
-        button {
-            color: var(--color-white) !important;
-        }
-
-        .language-area {
-            img {
-                filter: inherit;
-            }
-        }
-
         .menu-toggle {
             i {
                 color: var(--color-black);
+            }
+        }
+
+        .language {
+            .dropdown-toggle {
+                color: var(--color-black);
+                padding: 2rem 1rem;
+            }
+        }
+        .search {
+            i {
+                color: var(--color-black);
+                font-size: 1.2rem;
             }
         }
     }
@@ -139,51 +167,44 @@ header {
         position: absolute;
         right: 1rem;
         top: 40%;
+        color: var(--color-white);
     }
 
-    .language-area {
-        margin: 0rem 1.5rem;
-
-        @media screen and(max-width:$xl-breakpoint) {
-            justify-content: flex-start !important;
-            align-items: flex-start;
-            margin-left: 1rem !important;
-            margin: 0rem;
+    .language {
+        button {
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
         }
-
-        img {
-            max-width: 2rem;
-            cursor: pointer;
-            object-fit: cover;
+        .dropdown-toggle {
+            color: var(--color-white);
+            font-weight: 600;
+            @media screen and(max-width:$sm-breakpoint) {
+                font-size: 0.9rem;
+            }
         }
-    }
-
-    .social-media {
-        @media screen and(min-width:1750px) {
-            margin: 0px 3rem;
-        }
-
-        @media screen and(max-width:1440px) {
-            margin: 0px 2rem;
-        }
-
-        @media screen and(max-width:$xl-breakpoint) {
-            display: flex !important;
-            margin: 0rem;
-            margin-top: 1.5rem;
-            margin-left: 1rem;
-        }
-
-        ul {
+        .dropdown-menu {
+            min-width: 3rem;
             li {
                 a {
-                    color: var(--color-white);
-                    font-size: 1.3rem;
-
-                    @media screen and(max-width:1024px) {
-                        color: var(--color-black);
+                    &:hover {
+                        color: var(--color-red);
                     }
+                    background-color: var(--color-white) !important;
                 }
+            }
+        }
+    }
+    .search {
+        @media screen and(max-width:$xl-breakpoint) {
+            margin-right: 2.8rem;
+        }
+        i {
+            color: var(--color-white);
+            font-size: 1.2rem;
+            @media screen and(max-width:$sm-breakpoint) {
+                font-size: 1rem !important;
             }
         }
     }
@@ -205,6 +226,9 @@ header {
             display: block !important;
             flex-direction: column;
         }
+        @media screen and(max-width:$sm-breakpoint) {
+            top: 6rem;
+        }
 
         &.active {
             padding: 2rem 1rem;
@@ -213,19 +237,34 @@ header {
             width: 100% !important;
         }
     }
-
+    .dropdown {
+        &.mega-dropdown {
+            @media screen and(min-width:$xl-breakpoint) {
+                position: unset !important;
+            }
+        }
+    }
     .navbar-nav {
         @media screen and(max-width:$xl-breakpoint) {
             flex-direction: column !important;
         }
 
         .nav-item {
+            &:hover {
+                .nav-link {
+                    i {
+                        transform: rotate(2deg);
+                    }
+                }
+            }
             .nav-link {
                 color: var(--color-white);
                 font-weight: 600;
                 font-size: 1.4rem;
                 padding: 1.7rem 1rem;
                 position: relative;
+                display: flex;
+                align-items: center;
 
                 @media screen and(max-width:1440px) {
                     font-size: 1.2rem;
@@ -239,6 +278,13 @@ header {
                 @media screen and(max-width:$sm-breakpoint) {
                     font-size: 1.2rem;
                 }
+                i {
+                    color: var(--color-red);
+                    margin-left: 0.4rem;
+                    transition: 0.3s all;
+                    font-size: 1rem;
+                    transform: rotate(-90deg);
+                }
             }
 
             &:hover {
@@ -248,9 +294,12 @@ header {
                     }
                 }
             }
+            .dropdown-toggle::after {
+                display: none;
+            }
 
             .sub-item {
-                @media screen and (min-width: $lg-breakpoint) {
+                @media screen and (min-width: $xl-breakpoint) {
                     display: flex;
                     flex-direction: row;
                     align-items: flex-start;
@@ -259,12 +308,52 @@ header {
                     height: 100%;
                     padding: 2rem;
                 }
+                .dropdown-item {
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &::before {
+                        content: "";
+                        background-color: var(--color-red);
+                        height: 0.1rem;
+                        width: 50%;
+                        position: absolute;
+                        bottom: -0.5rem;
+                        display: block;
+                        @media screen and(max-width:$xl-breakpoint) {
+                            display: none !important;
+                        }
+                    }
+                    i {
+                        color: var(--color-red) !important;
+                        margin-right: 10rem;
+                        font-size: 1rem;
+                        @media screen and(max-width:1440px) {
+                            margin-right: 5rem;
+                        }
+                        @media screen and(max-width:$xl-breakpoint) {
+                            margin-right: 2rem;
+                        }
+                    }
+                    a {
+                        color: var(--color-black) !important;
+                        &:hover {
+                            color: var(--color-red) !important;
+                        }
+                    }
+                }
 
                 li {
                     @media screen and (min-width: $lg-breakpoint) {
                         width: calc(50% - 30px);
                         padding: 0.5rem 0rem;
                         margin: 0 0.5rem;
+                        position: relative;
+                    }
+                    a {
+                        font-style: italic;
+                        color: var(--color-black);
                     }
 
                     position: relative;
@@ -272,7 +361,6 @@ header {
             }
 
             .dropdown-menu {
-
                 min-width: 15rem;
                 padding: 1rem;
                 border: none;
@@ -308,24 +396,6 @@ header {
                 li {
                     position: relative;
                     padding-left: 0rem;
-
-                    &:hover {
-                        &::before {
-                            width: 100%;
-                        }
-                    }
-
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        background-color: var(--color-light-blue);
-                        width: 0;
-                        height: 2px;
-                        bottom: 0;
-                        transition: all 0.3s ease-out;
-                    }
 
                     a {
                         color: var(--color-gray-text);
@@ -401,12 +471,101 @@ header {
         @media screen and(max-width:$lg-breakpoint) {
             max-width: 13rem;
         }
+        @media screen and(max-width:$sm-breakpoint) {
+            max-width: 8rem !important;
+        }
     }
 }
 
 .banner {
     position: relative;
     overflow: hidden;
+    .navigate-area {
+        position: absolute;
+        bottom: 12rem;
+        @media screen and(max-width:1440px) {
+            bottom: 9rem;
+        }
+        @media screen and(max-width:$lg-breakpoint) {
+            bottom: 3rem;
+        }
+        @media screen and(max-width:$sm-breakpoint) {
+            left: 2rem;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: relative !important;
+            top: 0rem !important;
+            left: 9rem !important;
+            right: inherit !important;
+        }
+
+        .swiper-button-next:before,
+        .swiper-button-prev::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+        .swiper-button-next::before {
+            background: url(../img/next.png) no-repeat;
+            background-position: bottom;
+            background-size: contain;
+            right: -0.5rem;
+        }
+
+        .swiper-button-prev::before {
+            background: url(../img/prev.png) no-repeat;
+            background-position: bottom;
+            left: -2rem;
+            background-size: contain;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            display: none;
+        }
+        .swiper-fraction {
+            position: absolute;
+            z-index: 99;
+
+            .start-count {
+                font-size: 2.3rem;
+                color: var(--color-white);
+                font-weight: 900;
+                margin-right: 0.5rem;
+                @media screen and(max-width:$lg-breakpoint) {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .counter-length {
+                font-size: 1.5rem;
+                font-weight: 300;
+                position: relative;
+                color: var(--color-white);
+                margin-left: 1rem;
+
+                &::before {
+                    content: "";
+                    background-color: var(--color-white);
+                    height: 1.5rem;
+                    width: 0.1rem;
+                    position: absolute;
+                    bottom: 0.3rem;
+                    left: -0.8rem;
+                    transform: rotate(22deg);
+                    @media screen and(max-width:$lg-breakpoint) {
+                        height: 1.2rem;
+                    }
+                }
+                @media screen and(max-width:$lg-breakpoint) {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
 
     .swiper {
         width: 100%;
@@ -442,7 +601,7 @@ header {
 
             @media screen and(max-width:$lg-breakpoint) {
                 min-height: 70vh;
-                padding: 4rem 0rem;
+                padding: 4rem 1rem;
                 background-position: left !important;
             }
 
@@ -468,12 +627,15 @@ header {
 
             .content {
                 max-width: 40rem;
-                margin-top: 13rem;
+                margin-top: 10rem;
 
                 h1 {
                     color: var(--color-white);
                     font-weight: bold;
                     margin-bottom: 1rem;
+                    @media screen and(max-width:$lg-breakpoint) {
+                        font-size: 1.5rem;
+                    }
                 }
 
                 .text {
@@ -486,82 +648,29 @@ header {
                         width: 1rem;
                         position: absolute;
                         left: -1.5rem;
+                        @media screen and(max-width:$sm-breakpoint) {
+                            display: none;
+                        }
                     }
 
                     p {
                         color: var(--color-white);
                         font-weight: 300;
+                        @media screen and(max-width:$lg-breakpoint) {
+                            font-size: 0.9rem;
+                        }
                     }
                 }
             }
         }
-
-        .swiper-fraction {
-            position: absolute;
-            bottom: 0;
-            z-index: 99;
-
-            .start-count {
-                font-size: 1.5rem;
-                color: var(--color-white);
-            }
-
-            .counter-length {
-                font-size: 1.5rem;
-                font-weight: 800;
-                position: relative;
-                color: var(--color-white);
-            }
-        }
     }
-
-    /*  .navigate-area {
-        position: relative;
-        margin-top: 3rem;
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            position: relative !important;
-            top: inherit !important;
-            left: inherit !important;
-            right: inherit !important;
-        }
-
-        .swiper-button-next:before,
-        .swiper-button-prev::before {
-            content: "";
-            height: 100%;
-            width: 100%;
-            position: absolute;
-        }
-
-        .swiper-button-next::before {
-            background: url(../img/next.png) no-repeat;
-            background-position: bottom;
-            background-size: contain;
-            right: -2.5rem;
-        }
-
-        .swiper-button-prev::before {
-            background: url(../img/prev.png) no-repeat;
-            background-position: bottom;
-            left: -2.5rem;
-            background-size: contain;
-        }
-
-        .swiper-button-next:after,
-        .swiper-button-prev:after {
-            display: none;
-        }
-    } */
 }
 
 .fields {
     @include section;
-    
 
     @media (max-width: 991px) {
-        .tab-content>.tab-pane {
+        .tab-content > .tab-pane {
             display: block;
             opacity: 1;
         }
@@ -727,6 +836,12 @@ header {
 
         h3 {
             @include h3;
+            @media screen and(max-width:1440px) {
+                font-size: 2rem;
+            }
+            @media screen and(max-width:$sm-breakpoint) {
+                font-size: 1.7rem;
+            }
         }
 
         p {
@@ -737,7 +852,13 @@ header {
             font-weight: 400;
             display: block;
             margin-bottom: 1.5rem;
-            padding: 0rem 3rem;
+
+            @media screen and(max-width:1440px) {
+                font-size: 0.9rem;
+            }
+            @media screen and(max-width:$lg-breakpoint) {
+                text-align: start !important;
+            }
         }
 
         &::after {
@@ -827,6 +948,7 @@ header {
                             margin-top: 1rem;
                             font-size: 0.9rem;
                             padding: 0rem 1rem;
+                            font-style: italic;
                         }
                     }
                 }
@@ -896,6 +1018,12 @@ header {
             font-weight: 700;
             font-size: 2.6rem;
             margin-bottom: 1rem;
+            @media screen and(max-width:1440px) {
+                font-size: 2rem;
+            }
+            @media screen and(max-width:$sm-breakpoint) {
+                font-size: 1.7rem;
+            }
         }
 
         h6 {
@@ -904,6 +1032,9 @@ header {
             font-size: 1.3rem;
             font-style: italic;
             margin-bottom: 2rem;
+            @media screen and(max-width:1440px) {
+                font-size: 1rem;
+            }
         }
 
         &::after {
@@ -931,6 +1062,10 @@ header {
         @media screen and(max-width:1440px) {
             padding: 0rem 1rem;
             font-size: 0.9rem;
+        }
+        @media screen and(max-width:$lg-breakpoint) {
+            padding: 0rem;
+            text-align: start !important;
         }
     }
 }
@@ -962,6 +1097,15 @@ header {
                 bottom: -0.7rem;
                 left: 0;
             }
+            @media screen and(max-width:1440px) {
+                font-size: 2.5rem;
+            }
+            @media screen and(max-width:$xl-breakpoint) {
+                font-size: 2rem;
+            }
+            @media screen and(max-width:$sm-breakpoint) {
+                font-size: 1.8rem;
+            }
         }
 
         p {
@@ -972,6 +1116,10 @@ header {
             max-width: 45rem;
             @media screen and(max-width:1440px) {
                 font-size: 0.9rem;
+                max-width: 35rem;
+            }
+            @media screen and(max-width:$lg-breakpoint) {
+                max-width: 100%;
             }
         }
 
@@ -982,6 +1130,10 @@ header {
             font-style: italic;
             margin-top: 1rem;
             display: block;
+
+            @media screen and(max-width:$lg-breakpoint) {
+                margin-bottom: 1.5rem;
+            }
 
             &:focus {
                 box-shadow: none;
@@ -998,7 +1150,15 @@ header {
         height: 34rem;
         padding: 2rem 2rem 7rem 2rem;
         @media screen and(max-width:1440px) {
+            height: 30rem;
+        }
+        @media screen and(max-width:$lg-breakpoint) {
             height: 28rem;
+        }
+
+        @media screen and(max-width:$sm-breakpoint) {
+            height: 21rem;
+            padding: 2rem 1rem 7rem 1rem;
         }
 
         h3 {
@@ -1007,6 +1167,16 @@ header {
             font-weight: 700;
             font-style: italic;
             margin-bottom: 2rem;
+            @media screen and(max-width:1440px) {
+                font-size: 2.3rem;
+            }
+            @media screen and(max-width:$xl-breakpoint) {
+                font-size: 2rem;
+            }
+            @media screen and(max-width:$sm-breakpoint) {
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+            }
         }
 
         .swiper {
@@ -1033,6 +1203,9 @@ header {
                 -ms-flex-align: center;
                 -webkit-align-items: center;
                 align-items: center;
+                @media screen and(max-width:$sm-breakpoint) {
+                    height: auto !important;
+                }
 
                 .news-item {
                     .date {
@@ -1044,6 +1217,9 @@ header {
                                 font-size: 2.8rem;
                                 font-style: normal;
                                 font-weight: 800;
+                                @media screen and(max-width:1440px) {
+                                    font-size: 2rem;
+                                }
                             }
 
                             font-size: 1.6rem;
@@ -1051,6 +1227,9 @@ header {
                             color: var(--color-red);
                             line-height: 2rem;
                             font-style: italic;
+                            @media screen and(max-width:1440px) {
+                                font-size: 1.3rem;
+                            }
                         }
                     }
 
@@ -1062,6 +1241,9 @@ header {
                             text-align: left;
                             font-weight: 700;
                             font-size: 1.1rem;
+                            @media screen and(max-width:$xl-breakpoint) {
+                                font-size: 1rem;
+                            }
                         }
 
                         p {
@@ -1088,6 +1270,12 @@ header {
         .navigate-area {
             position: absolute;
             margin-top: 0;
+            @media screen and(max-width:$xl-breakpoint) {
+                margin-top: 1rem;
+            }
+            @media screen and(max-width:$sm-breakpoint) {
+                margin-top: 1.8rem;
+            }
 
             .swiper-button-next,
             .swiper-button-prev {
@@ -1141,7 +1329,13 @@ header {
     }
 
     @media screen and(max-width:$lg-breakpoint) {
-        padding: 1rem;
+        padding: 3rem 1rem;
+    }
+
+    .row {
+        @media screen and(max-width:$lg-breakpoint) {
+            flex-direction: column-reverse;
+        }
     }
 
     &::before {
@@ -1172,6 +1366,9 @@ header {
         @media screen and(max-width:1440px) {
             margin-top: 4rem;
         }
+        @media screen and(max-width:$lg-breakpoint) {
+            margin-top: 0rem;
+        }
 
         h2 {
             color: var(--color-white);
@@ -1180,6 +1377,14 @@ header {
             margin-bottom: 4rem;
             @media screen and(max-width:1440px) {
                 font-size: 2.5rem;
+            }
+
+            @media screen and(max-width:$xl-breakpoint) {
+                margin-bottom: 2rem;
+                font-size: 2rem;
+            }
+            @media screen and(max-width:$sm-breakpoint) {
+                font-size: 1.5rem;
             }
         }
 
@@ -1190,10 +1395,14 @@ header {
             font-size: 1rem;
             max-width: 45rem;
             margin-bottom: 4rem;
+            max-width: 35rem;
             @media screen and(max-width:1440px) {
                 font-size: 0.9rem;
                 max-width: 30rem;
                 margin-bottom: 1rem;
+            }
+            @media screen and(max-width:$lg-breakpoint) {
+                max-width: 100%;
             }
         }
 
@@ -1218,6 +1427,9 @@ header {
     .text-area {
         background-color: var(--color-white);
         padding: 1.5rem 0rem;
+        @media screen and(max-width:$xl-breakpoint) {
+            background-color: transparent;
+        }
 
         p {
             color: var(--color-red);
@@ -1225,6 +1437,9 @@ header {
             font-size: 0.96rem;
             margin: 1rem 0rem;
             margin-bottom: 2rem;
+            @media screen and(max-width:$xl-breakpoint) {
+                color: var(--color-white);
+            }
         }
 
         .btn {
@@ -1239,6 +1454,10 @@ header {
             &:focus {
                 box-shadow: none;
             }
+            @media screen and(max-width:$xl-breakpoint) {
+                background-color: var(--color-white);
+                color: var(--color-red);
+            }
         }
     }
 
@@ -1251,6 +1470,9 @@ header {
         bottom: 0rem;
         left: -4rem;
         z-index: -1;
+        @media screen and(max-width:$xl-breakpoint) {
+            display: none;
+        }
     }
 }
 
@@ -1262,8 +1484,17 @@ footer {
         @media screen and(max-width:1440px) {
             padding: 6rem 5rem 5rem 5rem;
         }
+        @media screen and(max-width:$xl-breakpoint) {
+            padding: 6rem 2rem 5rem 2rem;
+        }
         @media screen and(max-width:$lg-breakpoint) {
             padding: 2rem 1rem 2rem 1rem;
+        }
+
+        img {
+            @media screen and(max-width:$sm-breakpoint) {
+                max-width: 10rem;
+            }
         }
 
         .text {
@@ -1283,6 +1514,9 @@ footer {
             font-weight: 600;
             font-style: italic;
             margin-bottom: 1rem;
+            @media screen and(max-width:$sm-breakpoint) {
+                font-size: 1.3rem;
+            }
         }
 
         p {
@@ -1304,6 +1538,9 @@ footer {
                         a {
                             color: var(--color-red);
                             font-size: 2rem;
+                            @media screen and(max-width:1440px) {
+                                font-size: 1.6rem;
+                            }
                         }
                     }
                 }
@@ -1313,6 +1550,9 @@ footer {
         .form-area {
             padding: 0rem 3rem 0rem 0rem;
             margin-top: 2rem;
+            @media screen and(max-width:$lg-breakpoint) {
+                padding: 0rem;
+            }
 
             .form-control {
                 border: 2px solid var(--color-red);
@@ -1344,6 +1584,11 @@ footer {
             margin-bottom: 1rem;
         }
 
+        .demsa-career-area {
+            @media screen and(max-width:$lg-breakpoint) {
+                margin-bottom: 2rem;
+            }
+        }
         .contact-area {
             ul {
                 li {
@@ -1357,10 +1602,18 @@ footer {
 
                     p {
                         margin-bottom: 0rem;
+                        font-size: 1rem;
+                        @media screen and(max-width:1440px) {
+                            font-size: 0.9rem;
+                        }
                     }
 
                     a {
                         color: var(--color-black);
+                        font-size: 1rem;
+                        @media screen and(max-width:1440px) {
+                            font-size: 0.9rem;
+                        }
                     }
                 }
             }
@@ -1371,6 +1624,13 @@ footer {
         background-color: var(--color-red);
         padding: 1rem 10rem 1rem 10rem;
         color: var(--color-white);
+
+        @media screen and(max-width:1440px) {
+            padding: 1rem 5rem 1rem 5rem;
+        }
+        @media screen and(max-width:$xl-breakpoint) {
+            padding: 1rem 2rem 1rem 2rem;
+        }
         @media screen and(max-width:$lg-breakpoint) {
             padding: 1rem;
         }
