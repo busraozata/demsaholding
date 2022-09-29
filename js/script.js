@@ -129,7 +129,6 @@ $(".mega-menu .sub-item .dropdown-item").on("mouseover", function () {
 });
 /* ------------------------------------------------------------- */
 
-
 var rect = $("#container")[0].getBoundingClientRect();
 var mouse = { x: 0, y: 0, moved: false };
 
@@ -165,3 +164,5 @@ function parallaxIt(target, movement) {
 $(window).on("resize scroll", function () {
   rect = $("#container")[0].getBoundingClientRect();
 });
+
+

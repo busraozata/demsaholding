@@ -17,7 +17,7 @@
     <header class="header d-flex justify-content-center align-items-center">
         <div class="header-inner w-100">
             <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg d-flex align-items-center justify-content-between">
+                <nav class="navbar navbar-expand-lg d-flex align-items-center">
                     <!--  justify-content-between -->
                     <a class="navbar-brand" href="index.html">
                         <img class="img-fluid logo" src="./img/logo.png" alt="">
@@ -42,7 +42,7 @@
                                     <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                                         Kurumsal<i class="fa-sharp fa-solid fa-chevron-down"></i>
                                     </a>
-                                   <!--  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <!--  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li><a class="dropdown-item" href="#">Lorem Ipsum</a></li>
                                         <li><a class="dropdown-item" href="#">Lorem Ipsum</a></li>
                                         <li><a class="dropdown-item" href="#">Lorem Ipsum</a></li>
@@ -57,16 +57,23 @@
                                     <div class="dropdown-menu mega-menu" aria-labelledby="defaultDropdown">
                                         <div class="row">
                                             <div class="col-xl-4 d-xl-block d-none">
-                                                <div class="img-wrapper h-100">
-                                                    <img src="./img/hizmetler.jpg" class="img-fluid" alt="">
+                                                <div class="img-wrapper position-relative h-100 ">
+                                                    <div class="area">
+                                                        <img src="./img/hizmetler.jpg" class="img-fluid" alt="">
+                                                        <div class="text">
+                                                            <h4>HİZMETLERİMİZ</h4>
+                                                            <a href="" class="detail">Devam Et <i class="fa-solid fa-right-long"></i></a>
+                                                        </div>
+                                                    </div>
                                                 </div>
+
                                             </div>
                                             <div class="col-xl-8">
                                                 <ul class="sub-item">
                                                     <li class="dropdown-item" data-image="./img/hizmetler.jpg"><a href="before-after.html">Finans Hizmetleri</a> <i class="fa-sharp fa-solid fa-chevron-right"></i></li>
                                                     <li class="dropdown-item" data-image="./img/img2.jpg"><a href="service-detail.html">Lojistik Hizmetleri</a><i class="fa-sharp fa-solid fa-chevron-right"></i>
                                                     </li>
-                                                    <li class="dropdown-item" data-image="./img/hizmetler.jpg"><a href="#">Otomativ Hizmetleri</a><i class="fa-sharp fa-solid fa-chevron-right"></i>
+                                                    <li class="dropdown-item" data-image="./img/hizmetler.jpg"><a href="#">Otomotiv Hizmetleri</a><i class="fa-sharp fa-solid fa-chevron-right"></i>
                                                     </li>
                                                     <li class="dropdown-item" data-image="./img/img2.jpg"><a href="#">Akaryakıt ve Enerji Hizmetleri
                                                         </a><i class="fa-sharp fa-solid fa-chevron-right"></i>
@@ -94,7 +101,7 @@
 
                         </div>
                     </div>
-                    <div class=" d-lg-flex align-items-center gap-3 d-none">
+                    <div class="header-right d-lg-flex align-items-center gap-3 d-none">
 
                         <div class="language">
                             <div class="dropdown">
@@ -108,7 +115,8 @@
                             </div>
                         </div>
                         <div class="search">
-                            <i class=" fa-solid fa-magnifying-glass"></i>
+                            <!--  <i class=" fa-solid fa-magnifying-glass"></i> -->
+                            <img src="./img/search.png" class="img-fluid" alt="">
                         </div>
                     </div>
                 </nav>
@@ -139,7 +147,8 @@
                     <div class="container text-start">
                         <div class="content">
                             <h1>
-                                test
+                                Bizi Bugüne Taşıyan Değelerimizle
+                                Geleceğe Doğru Yürüyoruz.
                             </h1>
                             <div class="text">
                                 <p>
@@ -161,10 +170,11 @@
                     <div class="swiper-button-next" id="swiper-button-next1"></div>
                 </div>
             </div>
+            <a href="#fields" id="scroll"><img src="./img/scroll.png" alt=""></a>
         </div>
     </section>
 
-    <section class="fields">
+    <section class="fields" id="fields">
         <div class="container-fluid" id="container">
 
             <ul class="nav nav-tabs justify-content-center d-none d-lg-flex" id="myTab" role="tablist">
@@ -175,7 +185,7 @@
                     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Lojistik Hizmetleri</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Otomativ Hizmetleri</button>
+                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Otomotiv Hizmetleri</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="contact-tab2" data-bs-toggle="tab" data-bs-target="#contact-tab-pane2" type="button" role="tab" aria-controls="contact-tab-pane2" aria-selected="false">Akaryakıt ve Enerji Sistemleri</button>
@@ -194,50 +204,48 @@
                 <div class="tab-pane fade show active accordion-item" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
 
                     <h2 class="accordion-header d-lg-none" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Accordion Item #1</button>
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">FİNANS HİZMETLERİ</button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingOne" data-bs-parent="#myTabContent">
+                    <div id="collapseOne" class="accordion-collapse collapse d-lg-block show" aria-labelledby="headingOne" data-bs-parent="#myTabContent">
                         <div class="accordion-body">
                             <div class="title text-center">
                                 <h3>FİNANS HİZMETLERİ</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                             </div>
                             <div class="row w-100">
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="img-area d-flex align-items-start">
-                                                <div class="d-flex flex-column  ">
+                                            <div class="img-area d-xl-flex d-none align-items-start">
+                                                <div class="d-flex flex-column ">
                                                     <div class="d-flex align-items-end ">
-                                                        <img src="./img/layer1.jpg" class="img-fluid move-img1 " alt="" style="margin-left: 1rem; margin-right: 0.5rem;">
+                                                        <img src="./img/layer1.jpg" class="img-fluid move-img1 " alt="">
                                                         <img src="./img/img1.jpg" class="img-fluid move-img2" alt="">
                                                     </div>
                                                     <div class="d-flex align-items-start " style="margin-top: 1rem">
                                                         <img src="./img/img3.jpg" class="img-fluid move-img3" alt="">
-                                                        <img src="./img/img4.jpg" class="img-fluid move-img4" alt="" style="margin-left: 1rem">
+                                                        <img src="./img/img4.jpg" class="img-fluid move-img4" alt="">
 
                                                     </div>
                                                 </div>
                                                 <div style="margin-left: -3rem;">
-                                                    <img src="./img/img2.jpg" class="img-fluid move-img8" alt="" style="margin-top: -1.2rem; margin-bottom: 1rem; margin-left: 0.5rem;">
+                                                    <img src="./img/img2.jpg" class="img-fluid move-img8" alt="">
                                                     <div class="d-flex align-items-start position-relative">
-                                                        <img src="./img/layer2.jpg" class="img-fluid move-img5" alt="" style=" max-width: 3rem; margin-right: 0.5rem; margin-left: 0.5rem;">
+                                                        <img src="./img/layer2.jpg" class="img-fluid move-img5" alt="">
                                                         <img src="./img/img5.jpg" class="img-fluid move-img6" alt="">
-                                                        <img src="./img/layer3.png" class="img-fluid move-img7" alt="" style="
-                                                position: absolute;
-                                                right: 0;
-                                                bottom: -3rem;
-                                                
-                                            ">
+                                                        <img src="./img/layer3.png" class="img-fluid move-img7" alt="">
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="img-area d-xl-none d-block">
+                                                <img src="./img/img1.jpg" class="img-fluid " alt="">
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="content">
                                         <h4>DEMSA FİNANS</h4>
                                         <p>
@@ -254,7 +262,7 @@
                 <div class="tab-pane fade accordion-item" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                     <h2 class="accordion-header d-lg-none" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Accordion Item #2
+                            LOJİSTİK HİZMETLERİ
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingTwo" data-bs-parent="#myTabContent">
@@ -264,41 +272,39 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                             </div>
                             <div class="row w-100">
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="img-area d-flex align-items-start">
-                                                <div class="d-flex flex-column">
-                                                    <div class="d-flex align-items-end">
-                                                        <img src="./img/layer1.jpg" class="img-fluid" alt="" style="margin-left: 1rem; margin-right: 0.5rem;">
-                                                        <img src="./img/img1.jpg" class="img-fluid" alt="">
+                                            <div class="img-area d-xl-flex d-none align-items-start">
+                                                <div class="d-flex flex-column ">
+                                                    <div class="d-flex align-items-end ">
+                                                        <img src="./img/layer1.jpg" class="img-fluid move-img1 " alt="">
+                                                        <img src="./img/img1.jpg" class="img-fluid move-img2" alt="">
                                                     </div>
-                                                    <div class="d-flex align-items-start" style="margin-top: 1rem">
-                                                        <img src="./img/img3.jpg" class="img-fluid" alt="">
-                                                        <img src="./img/img4.jpg" class="img-fluid" alt="" style="margin-left: 1rem">
+                                                    <div class="d-flex align-items-start " style="margin-top: 1rem">
+                                                        <img src="./img/img3.jpg" class="img-fluid move-img3" alt="">
+                                                        <img src="./img/img4.jpg" class="img-fluid move-img4" alt="">
 
                                                     </div>
                                                 </div>
                                                 <div style="margin-left: -3rem;">
-                                                    <img src="./img/img2.jpg" class="img-fluid" alt="" style="margin-top: -1.2rem; margin-bottom: 1rem; margin-left: 0.5rem;">
+                                                    <img src="./img/img2.jpg" class="img-fluid move-img8" alt="">
                                                     <div class="d-flex align-items-start position-relative">
-                                                        <img src="./img/layer2.jpg" class="img-fluid" alt="" style=" max-width: 3rem; margin-right: 0.5rem; margin-left: 0.5rem;">
-                                                        <img src="./img/img5.jpg" class="img-fluid" alt="">
-                                                        <img src="./img/layer3.png" class="img-fluid" alt="" style="
-                                                position: absolute;
-                                                right: 0;
-                                                bottom: -3rem;
-                                                
-                                            ">
+                                                        <img src="./img/layer2.jpg" class="img-fluid move-img5" alt="">
+                                                        <img src="./img/img5.jpg" class="img-fluid move-img6" alt="">
+                                                        <img src="./img/layer3.png" class="img-fluid move-img7" alt="">
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="img-area d-xl-none d-block">
+                                                <img src="./img/img1.jpg" class="img-fluid " alt="">
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="content">
                                         <h4>DEMSA LOJİSTİK</h4>
                                         <p>
@@ -314,53 +320,51 @@
                 <div class="tab-pane fade accordion-item" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
                     <h2 class="accordion-header d-lg-none" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
+                            OTOMOTİV HİZMETLERİ
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingThree" data-bs-parent="#myTabContent">
                         <div class="accordion-body">
                             <div class="title text-center">
-                                <h3>OTOMATİV HİZMETLERİ</h3>
+                                <h3>OTOMOTİV HİZMETLERİ</h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                             </div>
                             <div class="row w-100">
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="img-area d-flex align-items-start">
-                                                <div class="d-flex flex-column">
-                                                    <div class="d-flex align-items-end">
-                                                        <img src="./img/layer1.jpg" class="img-fluid" alt="" style="margin-left: 1rem; margin-right: 0.5rem;">
-                                                        <img src="./img/img1.jpg" class="img-fluid" alt="">
+                                            <div class="img-area d-xl-flex d-none align-items-start">
+                                                <div class="d-flex flex-column ">
+                                                    <div class="d-flex align-items-end ">
+                                                        <img src="./img/layer1.jpg" class="img-fluid move-img1 " alt="">
+                                                        <img src="./img/img1.jpg" class="img-fluid move-img2" alt="">
                                                     </div>
-                                                    <div class="d-flex align-items-start" style="margin-top: 1rem">
-                                                        <img src="./img/img3.jpg" class="img-fluid" alt="">
-                                                        <img src="./img/img4.jpg" class="img-fluid" alt="" style="margin-left: 1rem">
+                                                    <div class="d-flex align-items-start " style="margin-top: 1rem">
+                                                        <img src="./img/img3.jpg" class="img-fluid move-img3" alt="">
+                                                        <img src="./img/img4.jpg" class="img-fluid move-img4" alt="">
 
                                                     </div>
                                                 </div>
                                                 <div style="margin-left: -3rem;">
-                                                    <img src="./img/img2.jpg" class="img-fluid" alt="" style="margin-top: -1.2rem; margin-bottom: 1rem; margin-left: 0.5rem;">
+                                                    <img src="./img/img2.jpg" class="img-fluid move-img8" alt="">
                                                     <div class="d-flex align-items-start position-relative">
-                                                        <img src="./img/layer2.jpg" class="img-fluid" alt="" style=" max-width: 3rem; margin-right: 0.5rem; margin-left: 0.5rem;">
-                                                        <img src="./img/img5.jpg" class="img-fluid" alt="">
-                                                        <img src="./img/layer3.png" class="img-fluid" alt="" style="
-                                                position: absolute;
-                                                right: 0;
-                                                bottom: -3rem;
-                                                
-                                            ">
+                                                        <img src="./img/layer2.jpg" class="img-fluid move-img5" alt="">
+                                                        <img src="./img/img5.jpg" class="img-fluid move-img6" alt="">
+                                                        <img src="./img/layer3.png" class="img-fluid move-img7" alt="">
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="img-area d-xl-none d-block">
+                                                <img src="./img/img1.jpg" class="img-fluid " alt="">
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="content">
-                                        <h4>DEMSA OTOMATİV</h4>
+                                        <h4>DEMSA OTOMOTİV</h4>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maece
                                         </p>
@@ -374,7 +378,7 @@
                 <div class="tab-pane fade accordion-item" id="contact-tab-pane2" role="tabpanel" aria-labelledby="contact-tab2" tabindex="0">
                     <h2 class="accordion-header d-lg-none" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
+                            AKARYAKIT VE ENERJİ SİSTEMLERİ
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingThree" data-bs-parent="#myTabContent">
@@ -384,41 +388,39 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                             </div>
                             <div class="row w-100">
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="img-area d-flex align-items-start">
-                                                <div class="d-flex flex-column">
-                                                    <div class="d-flex align-items-end">
-                                                        <img src="./img/layer1.jpg" class="img-fluid" alt="" style="margin-left: 1rem; margin-right: 0.5rem;">
-                                                        <img src="./img/img1.jpg" class="img-fluid" alt="">
+                                            <div class="img-area d-xl-flex d-none align-items-start">
+                                                <div class="d-flex flex-column ">
+                                                    <div class="d-flex align-items-end ">
+                                                        <img src="./img/layer1.jpg" class="img-fluid move-img1 " alt="">
+                                                        <img src="./img/img1.jpg" class="img-fluid move-img2" alt="">
                                                     </div>
-                                                    <div class="d-flex align-items-start" style="margin-top: 1rem">
-                                                        <img src="./img/img3.jpg" class="img-fluid" alt="">
-                                                        <img src="./img/img4.jpg" class="img-fluid" alt="" style="margin-left: 1rem">
+                                                    <div class="d-flex align-items-start " style="margin-top: 1rem">
+                                                        <img src="./img/img3.jpg" class="img-fluid move-img3" alt="">
+                                                        <img src="./img/img4.jpg" class="img-fluid move-img4" alt="">
 
                                                     </div>
                                                 </div>
                                                 <div style="margin-left: -3rem;">
-                                                    <img src="./img/img2.jpg" class="img-fluid" alt="" style="margin-top: -1.2rem; margin-bottom: 1rem; margin-left: 0.5rem;">
+                                                    <img src="./img/img2.jpg" class="img-fluid move-img8" alt="">
                                                     <div class="d-flex align-items-start position-relative">
-                                                        <img src="./img/layer2.jpg" class="img-fluid" alt="" style=" max-width: 3rem; margin-right: 0.5rem; margin-left: 0.5rem;">
-                                                        <img src="./img/img5.jpg" class="img-fluid" alt="">
-                                                        <img src="./img/layer3.png" class="img-fluid" alt="" style="
-                                                position: absolute;
-                                                right: 0;
-                                                bottom: -3rem;
-                                                
-                                            ">
+                                                        <img src="./img/layer2.jpg" class="img-fluid move-img5" alt="">
+                                                        <img src="./img/img5.jpg" class="img-fluid move-img6" alt="">
+                                                        <img src="./img/layer3.png" class="img-fluid move-img7" alt="">
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="img-area d-xl-none d-block">
+                                                <img src="./img/img1.jpg" class="img-fluid " alt="">
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="content">
                                         <h4>DEMSA ENERJİ SİSTEMLERİ</h4>
                                         <p>
@@ -434,7 +436,7 @@
                 <div class="tab-pane fade accordion-item" id="contact-tab-pane3" role="tabpanel" aria-labelledby="contact-tab3" tabindex="0">
                     <h2 class="accordion-header d-lg-none" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
+                            GAYRİMENKUL HİZMETLERİ
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingThree" data-bs-parent="#myTabContent">
@@ -444,41 +446,39 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                             </div>
                             <div class="row w-100">
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="img-area d-flex align-items-start">
-                                                <div class="d-flex flex-column">
-                                                    <div class="d-flex align-items-end">
-                                                        <img src="./img/layer1.jpg" class="img-fluid" alt="" style="margin-left: 1rem; margin-right: 0.5rem;">
-                                                        <img src="./img/img1.jpg" class="img-fluid" alt="">
+                                            <div class="img-area d-xl-flex d-none align-items-start">
+                                                <div class="d-flex flex-column ">
+                                                    <div class="d-flex align-items-end ">
+                                                        <img src="./img/layer1.jpg" class="img-fluid move-img1 " alt="">
+                                                        <img src="./img/img1.jpg" class="img-fluid move-img2" alt="">
                                                     </div>
-                                                    <div class="d-flex align-items-start" style="margin-top: 1rem">
-                                                        <img src="./img/img3.jpg" class="img-fluid" alt="">
-                                                        <img src="./img/img4.jpg" class="img-fluid" alt="" style="margin-left: 1rem">
+                                                    <div class="d-flex align-items-start " style="margin-top: 1rem">
+                                                        <img src="./img/img3.jpg" class="img-fluid move-img3" alt="">
+                                                        <img src="./img/img4.jpg" class="img-fluid move-img4" alt="">
 
                                                     </div>
                                                 </div>
                                                 <div style="margin-left: -3rem;">
-                                                    <img src="./img/img2.jpg" class="img-fluid" alt="" style="margin-top: -1.2rem; margin-bottom: 1rem; margin-left: 0.5rem;">
+                                                    <img src="./img/img2.jpg" class="img-fluid move-img8" alt="">
                                                     <div class="d-flex align-items-start position-relative">
-                                                        <img src="./img/layer2.jpg" class="img-fluid" alt="" style=" max-width: 3rem; margin-right: 0.5rem; margin-left: 0.5rem;">
-                                                        <img src="./img/img5.jpg" class="img-fluid" alt="">
-                                                        <img src="./img/layer3.png" class="img-fluid" alt="" style="
-                                                position: absolute;
-                                                right: 0;
-                                                bottom: -3rem;
-                                                
-                                            ">
+                                                        <img src="./img/layer2.jpg" class="img-fluid move-img5" alt="">
+                                                        <img src="./img/img5.jpg" class="img-fluid move-img6" alt="">
+                                                        <img src="./img/layer3.png" class="img-fluid move-img7" alt="">
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="img-area d-xl-none d-block">
+                                                <img src="./img/img1.jpg" class="img-fluid " alt="">
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="content">
                                         <h4>DEMSA GAYRİMENKUL</h4>
                                         <p>
@@ -494,7 +494,7 @@
                 <div class="tab-pane fade accordion-item" id="contact-tab-pane4" role="tabpanel" aria-labelledby="contact-tab4" tabindex="0">
                     <h2 class="accordion-header d-lg-none" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
+                            TURİZM VE OTELCİLİK
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingThree" data-bs-parent="#myTabContent">
@@ -504,41 +504,39 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                             </div>
                             <div class="row w-100">
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="img-area d-flex align-items-start">
-                                                <div class="d-flex flex-column">
-                                                    <div class="d-flex align-items-end">
-                                                        <img src="./img/layer1.jpg" class="img-fluid" alt="" style="margin-left: 1rem; margin-right: 0.5rem;">
-                                                        <img src="./img/img1.jpg" class="img-fluid" alt="">
+                                            <div class="img-area d-xl-flex d-none align-items-start">
+                                                <div class="d-flex flex-column ">
+                                                    <div class="d-flex align-items-end ">
+                                                        <img src="./img/layer1.jpg" class="img-fluid move-img1 " alt="">
+                                                        <img src="./img/img1.jpg" class="img-fluid move-img2" alt="">
                                                     </div>
-                                                    <div class="d-flex align-items-start" style="margin-top: 1rem">
-                                                        <img src="./img/img3.jpg" class="img-fluid" alt="">
-                                                        <img src="./img/img4.jpg" class="img-fluid" alt="" style="margin-left: 1rem">
+                                                    <div class="d-flex align-items-start " style="margin-top: 1rem">
+                                                        <img src="./img/img3.jpg" class="img-fluid move-img3" alt="">
+                                                        <img src="./img/img4.jpg" class="img-fluid move-img4" alt="">
 
                                                     </div>
                                                 </div>
                                                 <div style="margin-left: -3rem;">
-                                                    <img src="./img/img2.jpg" class="img-fluid" alt="" style="margin-top: -1.2rem; margin-bottom: 1rem; margin-left: 0.5rem;">
+                                                    <img src="./img/img2.jpg" class="img-fluid move-img8" alt="">
                                                     <div class="d-flex align-items-start position-relative">
-                                                        <img src="./img/layer2.jpg" class="img-fluid" alt="" style=" max-width: 3rem; margin-right: 0.5rem; margin-left: 0.5rem;">
-                                                        <img src="./img/img5.jpg" class="img-fluid" alt="">
-                                                        <img src="./img/layer3.png" class="img-fluid" alt="" style="
-                                                position: absolute;
-                                                right: 0;
-                                                bottom: -3rem;
-                                                
-                                            ">
+                                                        <img src="./img/layer2.jpg" class="img-fluid move-img5" alt="">
+                                                        <img src="./img/img5.jpg" class="img-fluid move-img6" alt="">
+                                                        <img src="./img/layer3.png" class="img-fluid move-img7" alt="">
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="img-area d-xl-none d-block">
+                                                <img src="./img/img1.jpg" class="img-fluid " alt="">
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="content">
                                         <h4>DEMSA TURİZM</h4>
                                         <p>
@@ -554,7 +552,7 @@
                 <div class="tab-pane fade accordion-item" id="contact-tab-pane5" role="tabpanel" aria-labelledby="contact-tab5" tabindex="0">
                     <h2 class="accordion-header d-lg-none" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
+                            SAĞLIK HİZMETLERİ
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse d-lg-block" aria-labelledby="headingThree" data-bs-parent="#myTabContent">
@@ -564,41 +562,39 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
                             </div>
                             <div class="row w-100">
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <div class="img-area d-flex align-items-start">
-                                                <div class="d-flex flex-column">
-                                                    <div class="d-flex align-items-end">
-                                                        <img src="./img/layer1.jpg" class="img-fluid" alt="" style="margin-left: 1rem; margin-right: 0.5rem;">
-                                                        <img src="./img/img1.jpg" class="img-fluid" alt="">
+                                            <div class="img-area d-xl-flex d-none align-items-start">
+                                                <div class="d-flex flex-column ">
+                                                    <div class="d-flex align-items-end ">
+                                                        <img src="./img/layer1.jpg" class="img-fluid move-img1 " alt="">
+                                                        <img src="./img/img1.jpg" class="img-fluid move-img2" alt="">
                                                     </div>
-                                                    <div class="d-flex align-items-start" style="margin-top: 1rem">
-                                                        <img src="./img/img3.jpg" class="img-fluid" alt="">
-                                                        <img src="./img/img4.jpg" class="img-fluid" alt="" style="margin-left: 1rem">
+                                                    <div class="d-flex align-items-start " style="margin-top: 1rem">
+                                                        <img src="./img/img3.jpg" class="img-fluid move-img3" alt="">
+                                                        <img src="./img/img4.jpg" class="img-fluid move-img4" alt="">
 
                                                     </div>
                                                 </div>
                                                 <div style="margin-left: -3rem;">
-                                                    <img src="./img/img2.jpg" class="img-fluid" alt="" style="margin-top: -1.2rem; margin-bottom: 1rem; margin-left: 0.5rem;">
+                                                    <img src="./img/img2.jpg" class="img-fluid move-img8" alt="">
                                                     <div class="d-flex align-items-start position-relative">
-                                                        <img src="./img/layer2.jpg" class="img-fluid" alt="" style=" max-width: 3rem; margin-right: 0.5rem; margin-left: 0.5rem;">
-                                                        <img src="./img/img5.jpg" class="img-fluid" alt="">
-                                                        <img src="./img/layer3.png" class="img-fluid" alt="" style="
-                                                position: absolute;
-                                                right: 0;
-                                                bottom: -3rem;
-                                                
-                                            ">
+                                                        <img src="./img/layer2.jpg" class="img-fluid move-img5" alt="">
+                                                        <img src="./img/img5.jpg" class="img-fluid move-img6" alt="">
+                                                        <img src="./img/layer3.png" class="img-fluid move-img7" alt="">
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="img-area d-xl-none d-block">
+                                                <img src="./img/img1.jpg" class="img-fluid " alt="">
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
 
-                                <div class="col-xl-6">
+                                <div class="col-lg-6">
                                     <div class="content">
                                         <h4>DEMSA SAĞLIK</h4>
                                         <p>
@@ -698,7 +694,7 @@
                                 </div>
                                 <div class="item-text">
                                     <p>Hizmet vermeye devam ettiğimiz
-                                        otomotiv hizmeti</p>
+                                        Otomotiv hizmeti</p>
                                 </div>
                             </div>
                         </div>
@@ -934,7 +930,7 @@
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing elit..Lorem ipsum dolor sit amet, consectetur adipiscing elit..Lorem ipsum dolor sit amet, consectetur adipiscing elit..
                             </p>
-                            <a href="" class="btn">CV GÖNDER</a>
+                            <a href="" class="btn"><span>CV</span> GÖNDER</a>
                         </div>
 
 

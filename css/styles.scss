@@ -1,4 +1,151 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+ */
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Black.woff2") format("woff2"), url("../fonts/Lato-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-ThinItalic.woff2") format("woff2"), url("../fonts/Lato-ThinItalic.woff") format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-BlackItalic.woff2") format("woff2"), url("../fonts/Lato-BlackItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato Hairline";
+    src: url("../fonts/Lato-Hairline.woff2") format("woff2"), url("../fonts/Lato-Hairline.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-BoldItalic.woff2") format("woff2"), url("../fonts/Lato-BoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato Hairline";
+    src: url("../fonts/Lato-HairlineItalic.woff2") format("woff2"),
+        url("../fonts/Lato-HairlineItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Heavy.woff2") format("woff2"), url("../fonts/Lato-Heavy.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-HeavyItalic.woff2") format("woff2"), url("../fonts/Lato-HeavyItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/Lato-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Italic.woff2") format("woff2"), url("../fonts/Lato-Italic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-LightItalic.woff2") format("woff2"), url("../fonts/Lato-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Medium.woff2") format("woff2"), url("../fonts/Lato-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-MediumItalic.woff2") format("woff2"), url("../fonts/Lato-MediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Semibold.woff2") format("woff2"), url("../fonts/Lato-Semibold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Thin.woff2") format("woff2"), url("../fonts/Lato-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-SemiboldItalic.woff2") format("woff2"),
+        url("../fonts/Lato-SemiboldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
 
 * {
     margin: 0;
@@ -67,7 +214,14 @@ header {
     left: 0;
     z-index: 9999;
     transition: 0.5s;
-    padding: 5rem 5rem;
+    padding: 5rem 8rem;
+
+    .menu-area {
+        margin-left: 4rem;
+        @media screen and(max-width:1440px) {
+            margin-left: inherit;
+        }
+    }
 
     @media screen and(max-width:1440px) {
         padding: 6rem 2rem;
@@ -80,6 +234,9 @@ header {
             .search {
                 i {
                     color: var(--color-black);
+                }
+                img {
+                    filter: invert(9);
                 }
             }
             .menu-toggle {
@@ -149,6 +306,9 @@ header {
             i {
                 color: var(--color-black);
                 font-size: 1.2rem;
+            }
+            img {
+                filter: invert(9);
             }
         }
     }
@@ -244,6 +404,11 @@ header {
             }
         }
     }
+    .navbar {
+        @media screen and(max-width:$xl-breakpoint) {
+            justify-content: space-between !important;
+        }
+    }
     .navbar-nav {
         @media screen and(max-width:$xl-breakpoint) {
             flex-direction: column !important;
@@ -259,8 +424,8 @@ header {
             }
             .nav-link {
                 color: var(--color-white);
-                font-weight: 600;
-                font-size: 1.4rem;
+                font-weight: 400;
+                font-size: 1.2rem;
                 padding: 1.7rem 1rem;
                 position: relative;
                 display: flex;
@@ -297,6 +462,41 @@ header {
             .dropdown-toggle::after {
                 display: none;
             }
+            .img-wrapper {
+                padding: 1rem;
+                .area {
+                    overflow: hidden;
+                    position: relative;
+                    .text {
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        bottom: 1rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: end;
+                        left: 0rem;
+                        background: #00000079;
+                        padding-left: 3rem;
+                        padding-bottom: 1rem;
+                        h4{
+                            color: var(--color-white);
+                            font-weight: 900;
+                            font-size: 1.4rem;
+                        }
+                        .detail{
+                            color: var(--color-white);
+                            font-weight: 300;
+                            font-size: 1rem;
+                            font-style: italic;
+                            i{
+                                color: var(--color-red);
+                                margin-left: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
 
             .sub-item {
                 @media screen and (min-width: $xl-breakpoint) {
@@ -305,18 +505,19 @@ header {
                     align-items: flex-start;
                     justify-content: flex-start;
                     flex-wrap: wrap;
-                    height: 100%;
-                    padding: 2rem;
+
+                    padding: 4rem 0rem;
                 }
                 .dropdown-item {
                     position: relative;
                     display: inline-flex;
                     align-items: center;
                     justify-content: space-between;
+                    margin: 0.4rem 0rem;
                     &::before {
                         content: "";
                         background-color: var(--color-red);
-                        height: 0.1rem;
+                        height: 2px;
                         width: 50%;
                         position: absolute;
                         bottom: -0.5rem;
@@ -327,7 +528,7 @@ header {
                     }
                     i {
                         color: var(--color-red) !important;
-                        margin-right: 10rem;
+                        margin-right: 7rem;
                         font-size: 1rem;
                         @media screen and(max-width:1440px) {
                             margin-right: 5rem;
@@ -368,7 +569,7 @@ header {
 
                 &.mega-menu {
                     left: 0rem;
-                    width: 100%;
+                    width: 83%;
                     flex-wrap: wrap;
 
                     @media screen and(max-width:$lg-breakpoint) {
@@ -441,11 +642,14 @@ header {
                     background-color: transparent;
 
                     a {
-                        font-size: 1rem;
+                        font-size: 1.2rem;
                         font-weight: 500;
 
                         @media screen and(max-width:$xl-breakpoint) {
                             padding-left: 0rem;
+                        }
+                        @media screen and(max-width:1440px) {
+                            font-size: 1rem;
                         }
 
                         &:hover {
@@ -473,6 +677,13 @@ header {
         }
         @media screen and(max-width:$sm-breakpoint) {
             max-width: 8rem !important;
+        }
+    }
+
+    .header-right {
+        margin-left: 13rem;
+        @media screen and(max-width:1440px) {
+            margin-left: 5rem;
         }
     }
 }
@@ -512,7 +723,7 @@ header {
             background: url(../img/next.png) no-repeat;
             background-position: bottom;
             background-size: contain;
-            right: -0.5rem;
+            right: 1rem;
         }
 
         .swiper-button-prev::before {
@@ -532,8 +743,8 @@ header {
 
             .start-count {
                 font-size: 2.3rem;
-                color: var(--color-white);
-                font-weight: 900;
+                color: var(--color-red);
+                font-weight: 500;
                 margin-right: 0.5rem;
                 @media screen and(max-width:$lg-breakpoint) {
                     font-size: 1.8rem;
@@ -628,7 +839,9 @@ header {
             .content {
                 max-width: 40rem;
                 margin-top: 10rem;
-
+                @media screen and(max-width:$lg-breakpoint) {
+                    margin-top: 4rem;
+                }
                 h1 {
                     color: var(--color-white);
                     font-weight: bold;
@@ -656,6 +869,7 @@ header {
                     p {
                         color: var(--color-white);
                         font-weight: 300;
+                        font-style: italic;
                         @media screen and(max-width:$lg-breakpoint) {
                             font-size: 0.9rem;
                         }
@@ -663,6 +877,17 @@ header {
                 }
             }
         }
+    }
+    #scroll {
+        position: absolute;
+        bottom: 2rem;
+        z-index: 999;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        animation: animation 2s infinite;
     }
 }
 
@@ -739,7 +964,23 @@ header {
     #myTabContent {
         .accordion-item {
             border: none;
-
+            .accordion-button {
+                color: var(--color-red);
+                padding: 0.5rem 0.4rem;
+            }
+            .accordion-button:not(.collapsed) {
+                background-color: transparent;
+                border: none !important;
+                color: var(--color-red);
+                box-shadow: none;
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+            button:focus:not(:focus-visible) {
+                border: 0;
+                box-shadow: none;
+            }
             .accordion-body {
                 position: relative;
                 display: flex;
@@ -748,7 +989,57 @@ header {
                 flex-direction: column;
 
                 @media screen and(max-width:$lg-breakpoint) {
-                    padding: 0.5rem !important;
+                    padding: 0rem !important;
+                }
+
+                .move-img1 {
+                    margin-left: 1rem;
+                    margin-right: 0.5rem;
+                    @media screen and(max-width:$lg-breakpoint) {
+                        display: none;
+                    }
+                }
+                .move-img2 {
+                }
+                .move-img3 {
+                    @media screen and(max-width:$lg-breakpoint) {
+                        display: none;
+                    }
+                }
+                .move-img4 {
+                    margin-left: 1rem;
+                    @media screen and(max-width:$lg-breakpoint) {
+                        display: none;
+                    }
+                }
+                .move-img5 {
+                    max-width: 3rem;
+                    margin-right: 0.5rem;
+                    margin-left: 0.5rem;
+                    @media screen and(max-width:1440px) {
+                        display: none;
+                    }
+                }
+                .move-img6 {
+                    @media screen and(max-width:1440px) {
+                        display: none;
+                    }
+                }
+                .move-img7 {
+                    position: absolute;
+                    right: 0;
+                    bottom: -3rem;
+                    @media screen and(max-width:$lg-breakpoint) {
+                        display: none;
+                    }
+                }
+                .move-img8 {
+                    margin-top: -1.2rem;
+                    margin-bottom: 1rem;
+                    margin-left: 0.5rem;
+                    @media screen and(max-width:1440px) {
+                        display: none;
+                    }
                 }
                 &::before {
                     content: "";
@@ -759,18 +1050,27 @@ header {
                     align-items: center;
                     display: flex;
                     justify-content: center;
+                    @media screen and(max-width:$lg-breakpoint) {
+                        display: none;
+                    }
                 }
 
                 .title {
                     margin-bottom: 5rem;
-
+                    @media screen and(max-width:$lg-breakpoint) {
+                        margin-bottom: 2rem;
+                    }
                     h3 {
                         color: var(--color-red);
-                        margin: 2.5rem 0rem 1.6rem 0rem;
+                        /*  margin: 2.5rem 0rem 1.6rem 0rem; */
                         font-weight: 600;
                         font-size: 2.3rem;
+                        margin: 3.8rem 0rem 1.6rem 0rem;
                         @media screen and(max-width:1440px) {
                             font-size: 2rem;
+                        }
+                        @media screen and(max-width:$lg-breakpoint) {
+                            font-size: 1.5rem;
                         }
                     }
 
@@ -789,7 +1089,9 @@ header {
 
                 .content {
                     margin-top: 6rem;
-
+                    @media screen and(max-width:$xl-breakpoint) {
+                        margin-top: 2rem;
+                    }
                     h4 {
                         color: var(--color-red);
                         font-style: italic;
@@ -830,6 +1132,8 @@ header {
 
 .demsa-current {
     @include section;
+    background-color: #fbfbfb;
+    padding: 4rem 5rem;
 
     .title {
         position: relative;
@@ -918,8 +1222,11 @@ header {
                             h2 {
                                 font-weight: 700;
                                 margin-bottom: 0rem;
-                                font-size: 3rem;
+                                font-size: 4rem;
                                 color: var(--color-white);
+                                @media screen and(max-width:1440px) {
+                                    font-size: 3rem;
+                                }
                             }
 
                             span {
@@ -949,6 +1256,7 @@ header {
                             font-size: 0.9rem;
                             padding: 0rem 1rem;
                             font-style: italic;
+                            font-weight: 300;
                         }
                     }
                 }
@@ -999,11 +1307,11 @@ header {
 
 .demsa-holding {
     position: relative;
-    padding: 2rem 3rem;
+    padding: 6rem 3rem 2rem 3rem;
     overflow: hidden;
 
     @media screen and(max-width:1440px) {
-        padding: 2rem 1rem;
+        padding: 4rem;
     }
 
     @media screen and(max-width:$lg-breakpoint) {
@@ -1015,7 +1323,7 @@ header {
         h3 {
             @include h3;
             font-style: normal;
-            font-weight: 700;
+            font-weight: 900;
             font-size: 2.6rem;
             margin-bottom: 1rem;
             @media screen and(max-width:1440px) {
@@ -1091,7 +1399,7 @@ header {
             &::after {
                 content: "";
                 background-color: var(--color-red);
-                width: 17rem;
+                width: 12rem;
                 height: 0.2rem;
                 position: absolute;
                 bottom: -0.7rem;
@@ -1375,6 +1683,7 @@ header {
             font-weight: 700;
             font-size: 3rem;
             margin-bottom: 4rem;
+            font-style: italic;
             @media screen and(max-width:1440px) {
                 font-size: 2.5rem;
             }
@@ -1391,7 +1700,6 @@ header {
         p {
             color: var(--color-white);
             font-weight: 400;
-            font-style: italic;
             font-size: 1rem;
             max-width: 45rem;
             margin-bottom: 4rem;
@@ -1410,7 +1718,6 @@ header {
             color: var(--color-white);
             padding-left: 0rem;
             font-weight: 500;
-            font-style: italic;
             margin-top: 1rem;
             display: inline-flex;
 
@@ -1449,7 +1756,10 @@ header {
             background-color: var(--color-red);
             border-radius: 0rem;
             padding: 0.5rem 2.5rem;
-            font-weight: 600;
+            font-weight: 400;
+            span {
+                font-weight: bold;
+            }
 
             &:focus {
                 box-shadow: none;
@@ -1477,8 +1787,9 @@ header {
 }
 
 footer {
+    margin-top: 1.5rem;
     .footer-top {
-        background-color: var(--color-white);
+        background-color: #fbfbfb;
         padding: 6rem 10rem 5rem 10rem;
 
         @media screen and(max-width:1440px) {
@@ -1500,11 +1811,9 @@ footer {
         .text {
             p {
                 color: var(--text-color);
-                font-size: 1rem;
+                font-size: 0.9rem;
                 font-weight: 500;
-                @media screen and(max-width:1440px) {
-                    font-size: 0.9rem;
-                }
+                font-style: normal;
             }
         }
 
@@ -1523,10 +1832,7 @@ footer {
             color: var(--text-color);
             font-style: italic;
             font-weight: 500;
-            font-size: 1rem;
-            @media screen and(max-width:1440px) {
-                font-size: 0.9rem;
-            }
+            font-size: 0.9rem;
         }
 
         .follow-us {
@@ -1538,6 +1844,7 @@ footer {
                         a {
                             color: var(--color-red);
                             font-size: 2rem;
+
                             @media screen and(max-width:1440px) {
                                 font-size: 1.6rem;
                             }
@@ -1602,18 +1909,14 @@ footer {
 
                     p {
                         margin-bottom: 0rem;
-                        font-size: 1rem;
-                        @media screen and(max-width:1440px) {
-                            font-size: 0.9rem;
-                        }
+                        font-size: 0.9rem;
+                        font-style: italic;
                     }
 
                     a {
                         color: var(--color-black);
-                        font-size: 1rem;
-                        @media screen and(max-width:1440px) {
-                            font-size: 0.9rem;
-                        }
+                        font-size: 0.9rem;
+                        font-style: italic;
                     }
                 }
             }
@@ -1621,6 +1924,7 @@ footer {
     }
 
     .copyright {
+        margin-top: 1.5rem;
         background-color: var(--color-red);
         padding: 1rem 10rem 1rem 10rem;
         color: var(--color-white);
@@ -1663,5 +1967,20 @@ footer {
                 max-width: 1.7rem;
             }
         }
+    }
+}
+
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
