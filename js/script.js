@@ -26,30 +26,10 @@ document.addEventListener("scroll", function () {
   }
 });
 
-const fraction = document.getElementById("fraction");
-const slides = document.querySelectorAll(".slide-item");
-const slideCount = slides.length;
-console.log("iki", slideCount);
-fraction.innerHTML = `<span class="start-count"> 01</span> <span class="counter-length">0${slideCount}</span>`;
-var swiperBanner = new Swiper(".mySwiperBanner", {
+var mySwiperCurrent = new Swiper(".mySwiperCurrent", {
   navigation: {
     nextEl: "#swiper-button-next1",
     prevEl: "#swiper-button-prev1",
-  },
-  effect: "fade",
-  on: {
-    slideChange: () => {
-      fraction.innerHTML = `<span class="start-count">0${
-        swiperBanner.realIndex + 1
-      }</span> <span class="counter-length">0${slideCount}</span>`;
-    },
-  },
-});
-
-var mySwiperCurrent = new Swiper(".mySwiperCurrent", {
-  navigation: {
-    nextEl: "#swiper-button-next",
-    prevEl: "#swiper-button-prev",
   },
   breakpoints: {
     640: {
@@ -77,7 +57,7 @@ var mySwiperCurrent = new Swiper(".mySwiperCurrent", {
   },
 });
 
-var swiper = new Swiper(".mySwiperNews", {
+var mySwiperNews = new Swiper(".mySwiperNews", {
   navigation: {
     nextEl: "#swiper-button-next3",
     prevEl: "#swiper-button-prev3",
@@ -113,6 +93,28 @@ var swiper = new Swiper(".mySwiperNews", {
     },
   },
 });
+
+
+const fraction = document.getElementById("fraction");
+const slides = document.querySelectorAll(".slide-item");
+const slideCount = slides.length;
+console.log("iki", slideCount);
+fraction.innerHTML = `<span class="start-count"> 01</span> <span class="counter-length">0${slideCount}</span>`;
+var swiperBanner = new Swiper(".mySwiperBanner", {
+  navigation: {
+    nextEl: "#swiper-button-next1",
+    prevEl: "#swiper-button-prev1",
+  },
+  effect: "fade",
+  on: {
+    slideChange: () => {
+      fraction.innerHTML = `<span class="start-count">0${
+        swiperBanner.realIndex + 1
+      }</span> <span class="counter-length">0${slideCount}</span>`;
+    },
+  },
+});
+
 
 function toggleTab(e) {
   var hrefVal = $(e).attr("href");

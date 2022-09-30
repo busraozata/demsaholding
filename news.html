@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Demsa Holding</title>
+</head>
+
+<body>
+    <header class="header sub-header d-flex justify-content-center align-items-center">
+        <div class="header-inner w-100">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg d-flex align-items-center">
+                    <!--  justify-content-between -->
+                    <a class="navbar-brand" href="index.html">
+                        <img class="img-fluid logo" src="./img/logo.png" alt="">
+                    </a>
+
+                    <div class="wrapper">
+                        <button role="button" class="menu-toggle">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="menu-area">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Ana Sayfa</a>
+                                </li>
+                                <li class="nav-item dropdown" data-bs-toggle="navbarDropdown" aria-expanded="false">
+
+                                    <a class="nav-link" href="about.html">
+                                        Kurumsal<i class="fa-sharp fa-solid fa-chevron-down"></i>
+                                    </a>
+                                    <!--  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Lorem Ipsum</a></li>
+                                        <li><a class="dropdown-item" href="#">Lorem Ipsum</a></li>
+                                        <li><a class="dropdown-item" href="#">Lorem Ipsum</a></li>
+                                    </ul> -->
+                                </li>
+
+                                <li class="nav-item dropdown mega-dropdown" data-bs-toggle="navbarDropdown" aria-expanded="false">
+
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Hizmetlerimiz<i class="fa-sharp fa-solid fa-chevron-down"></i>
+                                    </a>
+                                    <div class="dropdown-menu mega-menu" aria-labelledby="defaultDropdown">
+                                        <div class="row">
+                                            <div class="col-xl-4 d-xl-block d-none">
+                                                <div class="img-wrapper position-relative h-100 ">
+                                                    <div class="area">
+                                                        <img src="./img/hizmetler.jpg" class="img-fluid" alt="">
+                                                        <div class="text">
+                                                            <h4>HİZMETLERİMİZ</h4>
+                                                            <a href="services.html" class="detail">Devam Et <i class="fa-solid fa-right-long"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-xl-8">
+                                                <ul class="sub-item">
+                                                    <li class="dropdown-item" data-image="./img/hizmetler.jpg"><a href="before-after.html">Finans Hizmetleri</a> <i class="fa-sharp fa-solid fa-chevron-right"></i></li>
+                                                    <li class="dropdown-item" data-image="./img/img2.jpg"><a href="service-detail.html">Lojistik Hizmetleri</a><i class="fa-sharp fa-solid fa-chevron-right"></i>
+                                                    </li>
+                                                    <li class="dropdown-item" data-image="./img/hizmetler.jpg"><a href="#">Otomotiv Hizmetleri</a><i class="fa-sharp fa-solid fa-chevron-right"></i>
+                                                    </li>
+                                                    <li class="dropdown-item" data-image="./img/img2.jpg"><a href="#">Akaryakıt ve Enerji Hizmetleri
+                                                        </a><i class="fa-sharp fa-solid fa-chevron-right"></i>
+                                                    </li>
+                                                    <li class="dropdown-item" data-image="./img/img2.jpg"><a href="#">Gayrimenkul Hizmetleri </a><i class="fa-sharp fa-solid fa-chevron-right"></i></li>
+                                                    <li class="dropdown-item" data-image="./img/hizmetler.jpg"><a href="#">Turizm ve Otelcilik </a><i class="fa-sharp fa-solid fa-chevron-right"></i></li>
+                                                    <li class="dropdown-item" data-image="./img/img2.jpg"> <a href="#">Sağlık Hizmetleri </a><i class="fa-sharp fa-solid fa-chevron-right"></i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="blog.html">Haberler <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="blog.html">Projeler <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="contact.html">İletişim <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="header-right d-lg-flex align-items-center gap-3 d-none">
+
+                        <div class="language">
+                            <div class="dropdown">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    ING
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <li><a class="dropdown-item" href="#">TR</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search">
+                            <!--  <i class=" fa-solid fa-magnifying-glass"></i> -->
+                            <img src="./img/search.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="sub-banner" style="background-color: black;">
+        <div class="top-menu">
+            <div class="container-fluid">
+                <ul class="d-flex align-items-center gap-2">
+                    <li><a href="index.html">Ana Sayfa <i class="fa-solid fa-right-long"></i></a></li>
+                    <li><a href="">Haberler</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sub-banner-area d-flex align-items-end" style="background: url(./img/person-conducting-interview.jpg) no-repeat; background-size: cover; background-position: center; min-height: 50vh;">
+            <div class="container-fluid">
+                <div class="content">
+                    <h2>Haberler</h2>
+                    <div class="text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor unt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commo viverra maecenas accumsan
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="container-fluid">
+            <div class="title text-center">
+                <h3>MEDYA</h3>
+                <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </P>
+            </div>
+        </div>
+        <div class="news-list">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 mb-5 d-flex justify-content-center">
+                        <div class="blog-item">
+                            <div class="img-area">
+                                <div class="img-wrapper">
+                                    <img src="./img/wall-background-television-screens-used-news-studio-background.jpg" class="img-fluid " alt="">
+                                </div>
+                            </div>
+                            <div class="item-body">
+                                <h4>Demsa Holding Avrupa ve Amerika’da</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                <a href="" class="btn">Devam Et</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-5 d-flex justify-content-center">
+                        <div class="blog-item">
+                            <div class="img-area">
+                                <div class="img-wrapper">
+                                    <img src="./img/wall-background-television-screens-used-news-studio-background.jpg" class="img-fluid " alt="">
+                                </div>
+                            </div>
+                            <div class="item-body">
+                                <h4>Demsa Holding Avrupa ve Amerika’da</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                <a href="" class="btn">Devam Et</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-5 d-flex justify-content-center">
+                        <div class="blog-item">
+                            <div class="img-area">
+                                <div class="img-wrapper">
+                                    <img src="./img/wall-background-television-screens-used-news-studio-background.jpg" class="img-fluid " alt="">
+                                </div>
+                            </div>
+                            <div class="item-body">
+                                <h4>Demsa Holding Avrupa ve Amerika’da</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                <a href="" class="btn">Devam Et</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-5 d-flex justify-content-center">
+                        <div class="blog-item">
+                            <div class="img-area">
+                                <div class="img-wrapper">
+                                    <img src="./img/wall-background-television-screens-used-news-studio-background.jpg" class="img-fluid " alt="">
+                                </div>
+                            </div>
+                            <div class="item-body">
+                                <h4>Demsa Holding Avrupa ve Amerika’da</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                <a href="" class="btn">Devam Et</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-5 d-flex justify-content-center">
+                        <div class="blog-item">
+                            <div class="img-area">
+                                <div class="img-wrapper">
+                                    <img src="./img/wall-background-television-screens-used-news-studio-background.jpg" class="img-fluid " alt="">
+                                </div>
+                            </div>
+                            <div class="item-body">
+                                <h4>Demsa Holding Avrupa ve Amerika’da</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                <a href="" class="btn">Devam Et</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-5 d-flex justify-content-center">
+                        <div class="blog-item">
+                            <div class="img-area">
+                                <div class="img-wrapper">
+                                    <img src="./img/wall-background-television-screens-used-news-studio-background.jpg" class="img-fluid " alt="">
+                                </div>
+                            </div>
+                            <div class="item-body">
+                                <h4>Demsa Holding Avrupa ve Amerika’da</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                <a href="" class="btn">Devam Et</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demsa-current demsa-sub-current">
+        <div class="container-fluid">
+            <div class="col-lg-12">
+                <div class="title d-flex flex-column justify-content-center align-items-center">
+                    <h3>DEMSA GÜNCEL</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                </div>
+            </div>
+            <div class="swiper mySwiperCurrent">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="box-item d-flex">
+                            <div class="img-wrapper">
+                                <img src="./img/country.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="content-info">
+                                    <div class="title-area">
+                                        <!--  <i class="fa-solid fa-plus"></i> -->
+                                        <h2>+ 42</h2> 
+                                        <!-- <img src="./img/42_Çalışma Yüzeyi 1.svg" class="img-fluid number" alt=""> -->
+                                    </div>
+                                </div>
+                                <div class="item-text">
+                                    <p>Hizmet vermeye devam ettiğimiz
+                                        ülke sayısı</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box-item">
+                            <div class="img-wrapper">
+                                <img src="./img/building.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="content-info">
+                                    <div class="title-area">
+                                        <h2>+ 120</h2> 
+                                       <!--  <img src="./img/42-03.svg" class="img-fluid number" alt=""> -->
+                                    </div>
+                                </div>
+                                <div class="item-text">
+                                    <p>Hizmet vermekten mutluluk
+                                        duyduğumuz gayrimenkul
+                                        hizmet sayısı</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box-item">
+                            <div class="img-wrapper">
+                                <img src="./img/financial.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="content ">
+                                <div class="content-info">
+                                    <div class="title-area">
+                                        <h2>+ 600 K</h2> 
+                                     <!--    <img src="./img/42-02.svg" class="img-fluid number" alt=""> -->
+                                    </div>
+                                </div>
+                                <div class="item-text">
+                                    <p>Hizmet vermiş olduğumuz
+                                        finansal hizmet desteği</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box-item">
+                            <div class="img-wrapper">
+                                <img src="./img/car.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="content-info">
+                                    <div class="title-area">
+                                        <h2>+ 150</h2> 
+<!--                                         <img src="./img/42-04.svg" class="img-fluid number" alt="">
+ -->                                    </div>
+                                </div>
+                                <div class="item-text">
+                                    <p>Hizmet vermeye devam ettiğimiz
+                                        Otomotiv hizmeti</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box-item">
+                            <div class="img-wrapper">
+                                <img src="./img/logistic.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="content-info">
+                                    <div class="title-area">
+                                        <h2>+ 900</h2> 
+<!--                                         <img src="./img/42-05.svg" class="img-fluid number" alt="">
+ -->                                    </div>
+                                </div>
+                                <div class="item-text">
+                                    <p>Hizmet vermeye devam ettiğimiz
+                                        lojistik desteği</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="box-item">
+                            <div class="img-wrapper">
+                                <img src="./img/country.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="content-info">
+                                    <div class="title-area">
+                                        <h2>+ 900</h2> 
+                                       <!--  <img src="./img/900.svg" class="img-fluid number" alt=""> -->
+                                    </div>
+                                </div>
+                                <div class="item-text">
+                                    <p>Hizmet vermeye devam ettiğimiz
+                                        ülke sayısı</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="navigate-area d-flex justify-content-center align-items-center">
+                <div class="swiper-button-next" id="swiper-button-next1"></div>
+                <div class="swiper-button-prev" id="swiper-button-prev1"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="img-wrapper">
+                            <img src="./img/logo-black.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="text mt-5">
+                            <p style="max-width: 22rem;">
+                                Türkiye'nin ve Avrupa'nın en büyük, başarılı ve yenilikçi lider şirketlerinden biri olma yolunda, deneyimli ve eğitimli kadrosu ile faaliyet gösterdiği her sektörde, başarılı işlere imza atarak emin adımlarla ilerleyen Demsa Holding A.Ş. , yönetim kurulu başkanımız Dr. Mimar Hüseyin DEMİR tarafından kurulmuştur.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div>
+                            <div class="follow-us">
+                                <h5>
+                                    Bizi Takip Edin
+                                </h5>
+                                <p>
+                                    Demsa Holding hakkında güncel haberler için bizi sosyal medya hesaplarımızdan takip edin.
+                                </p>
+                                <div class="social-media">
+                                    <ul class="d-flex gap-3">
+                                        <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                        <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="demsa-career-area mt-5">
+                                <h5>
+                                    Demsa Kariyer
+                                </h5>
+                                <p>
+                                    Demsa Holding hakkında güncel haberler için bizi sosyal medya hesaplarımızdan takip edin.
+                                </p>
+                                <form>
+                                    <div class="form-area d-flex align-items-center">
+                                        <div class="form-group w-100">
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <button type="submit" class="btn">Gönder</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div>
+                            <h5>
+                                Bizimle İletişime Geçin
+                            </h5>
+                            <h6>
+                                Merkez
+                            </h6>
+                            <div class="contact-area">
+                                <ul>
+                                    <li>
+                                        <p><i class="fa-solid fa-location-dot"></i> Zeytinlik Mah. Fişekhane Cad. No: 50 Bakırköy İstanbul / TÜRKİYE </p>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-mobile"></i>
+                                            <span>
+                                                +90 (212) 461 07 95
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-fax"></i>
+                                            <span>
+                                                +90 (212) 461 07 79
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <span>
+                                                info@demsaholding.com
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h6 class="mt-4">
+                                    Şube
+                                </h6>
+                                <ul>
+                                    <li>
+                                        <p><i class="fa-solid fa-location-dot"></i> Zeytinlik Mah. Fişekhane Cad. No: 50 Bakırköy İstanbul / TÜRKİYE </p>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-mobile"></i>
+                                            <span>
+                                                +90 (212) 461 07 95
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-fax"></i>
+                                            <span>
+                                                +90 (212) 461 07 79
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <span>
+                                                info@demsaholding.com
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <span>Copyright © 2022 DEMSA HOLDİNG All Rights Reserved.</span>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-end">
+                        <a href="https://www.wucize.com/">
+                            <img src="./img/wucize-footer.png" class="img-fluid" alt="">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>
