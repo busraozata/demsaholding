@@ -279,7 +279,13 @@ header .menu-area {
 
 header.header_scroll {
   background-color: var(--color-white);
-  padding: 3rem 2rem;
+  padding: 3rem 8rem;
+}
+
+@media screen and (max-width: 1440px) {
+  header.header_scroll {
+    padding: 3rem 2rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {

@@ -297,7 +297,11 @@ header {
 
     &.header_scroll {
         background-color: var(--color-white);
-        padding: 3rem 2rem;
+        padding: 3rem 8rem;
+
+        @media screen and(max-width:1440px) {
+            padding: 3rem 2rem;
+        }
 
         @media screen and(max-width:$xl-breakpoint) {
             padding: 4rem 0.5rem;
