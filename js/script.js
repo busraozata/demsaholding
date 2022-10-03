@@ -94,6 +94,33 @@ var mySwiperNews = new Swiper(".mySwiperNews", {
   },
 });
 
+var swiperServiceSlide = new Swiper(".swiperServiceSlide", {
+  navigation: {
+    nextEl: "#swiper-button-nextService",
+    prevEl: "#swiper-button-prevService",
+  },
+});
+
+var mySwiperLastBlog = new Swiper(".mySwiperLastBlog", {
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 50,
+    },
+    1366: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});
 
 const fraction = document.getElementById("fraction");
 const slides = document.querySelectorAll(".slide-item");
@@ -114,7 +141,6 @@ var swiperBanner = new Swiper(".mySwiperBanner", {
     },
   },
 });
-
 
 function toggleTab(e) {
   var hrefVal = $(e).attr("href");
@@ -166,5 +192,3 @@ function parallaxIt(target, movement) {
 $(window).on("resize scroll", function () {
   rect = $("#container")[0].getBoundingClientRect();
 });
-
-
