@@ -2347,7 +2347,7 @@ header .header-right {
           align-items: flex-end;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1440px) {
   .our-projects-page .project-lists .project-item:nth-child(2n + 0) .content {
     padding-left: 3rem;
   }
@@ -2376,7 +2376,7 @@ header .header-right {
           align-items: flex-start;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1440px) {
   .our-projects-page .project-lists .project-item .content {
     padding-right: 3rem;
   }
@@ -2391,8 +2391,14 @@ header .header-right {
 .our-projects-page .project-lists .project-item .content h3 {
   font-weight: 300;
   color: var(--color-black);
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 1440px) {
+  .our-projects-page .project-lists .project-item .content h3 {
+    font-size: 2.5rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -2409,7 +2415,7 @@ header .header-right {
 }
 
 .our-projects-page .project-lists .project-item .content .text {
-  max-width: 33.3rem;
+  max-width: 48.3rem;
   margin-bottom: 2rem;
 }
 
