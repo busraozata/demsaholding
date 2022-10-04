@@ -1230,8 +1230,7 @@ header {
                         display: none;
                     }
                 }
-                .move-img2 {
-                }
+             
                 .move-img3 {
                     @media screen and(max-width:$lg-breakpoint) {
                         display: none;
@@ -3350,7 +3349,7 @@ header {
                         color: var(--color-red);
                         font-weight: 400;
                         @media screen and(max-width:$sm-breakpoint) {
-                            font-size: 0.9rem;
+                            font-size: 1.1rem;
                         }
                     }
                 }
