@@ -200,34 +200,52 @@ a {
   transform: translate(0px, -100%) scale(0, 0);
   opacity: 0;
   z-index: 9999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#search input[type="search"] {
-  position: absolute;
-  top: 50%;
+#search form {
+  text-align: center;
+}
+
+#search form input[type="search"] {
   width: 100%;
   color: white;
   background: rgba(0, 0, 0, 0.87);
-  font-size: 60px;
+  font-size: 3rem;
   font-weight: 300;
   text-align: center;
   border: 0px;
   margin: 0px auto;
-  margin-top: -51px;
-  padding-left: 30px;
-  padding-right: 30px;
   outline: none;
 }
 
-#search .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: 61px;
-  margin-left: -45px;
-  border: white;
+@media screen and (max-width: 991px) {
+  #search form input[type="search"] {
+    font-size: 1.5rem;
+  }
+}
+
+#search form .btn {
+  border: var(--color-white);
   color: var(--color-white);
   border: 1px solid var(--color-white);
+  margin-top: 2rem;
+  border-radius: 0;
+  padding: 0.5rem 2rem;
+}
+
+#search form .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
 }
 
 #search .close {
@@ -317,6 +335,10 @@ header .menu-area {
   header.bg-color .logo {
     -webkit-filter: invert(9);
             filter: invert(9);
+  }
+  header.bg-color .search.search-mobil {
+    padding-left: 1rem;
+    margin-top: 1rem;
   }
   header.bg-color .search i {
     color: var(--color-black);
@@ -430,6 +452,14 @@ header .menu-toggle {
   right: 1rem;
   top: 40%;
   color: var(--color-white);
+}
+
+header .language.language-mobil {
+  margin-top: 1rem;
+}
+
+header .language.language-mobil .dropdown-menu {
+  margin-left: 0.5rem;
 }
 
 header .language button:focus {
@@ -1562,6 +1592,12 @@ header .header-right {
   margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 600px) {
+  .fields #myTabContent .accordion-item .accordion-body .content h4 {
+    font-size: 1.3rem;
+  }
+}
+
 .fields #myTabContent .accordion-item .accordion-body .content p {
   color: var(--text-color);
   font-style: italic;
@@ -1586,6 +1622,7 @@ header .header-right {
 .fields #myTabContent .accordion-item .accordion-body .content .btn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+  outline: none;
 }
 
 .fields #myTabContent .accordion-item .accordion-body .content .btn i {
@@ -2026,6 +2063,7 @@ header .header-right {
 .our-projects .content .btn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+  outline: none;
 }
 
 .our-projects .content .btn i {
@@ -2178,6 +2216,7 @@ header .header-right {
 .our-projects .news .swiper .swiper-slide .news-item .text .btn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+  outline: none;
 }
 
 .our-projects .news .navigate-area {
@@ -2517,6 +2556,7 @@ header .header-right {
 .our-projects-page .project-lists .project-item .content .btn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+  outline: none;
 }
 
 .our-projects-page .project-lists .project-item .content .btn:hover {
@@ -2724,6 +2764,7 @@ header .header-right {
 .demsa-career .content .btn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+  outline: none;
 }
 
 .demsa-career .content .btn i {
@@ -2772,6 +2813,7 @@ header .header-right {
 .demsa-career .text-area .btn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+  outline: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -3328,6 +3370,12 @@ header .header-right {
   margin-left: 0.8rem;
 }
 
+.services-list .list-area .service-item .service-info .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
 .services-list .list-area .service-item:nth-child(2n + 0) {
   background-color: var(--color-white);
 }
@@ -3838,6 +3886,7 @@ header .header-right {
 .last-news .content-area .swiper-area .swiper .swiper-slide .news-item .text .btn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+  outline: none;
 }
 
 .news-page .title {
@@ -4044,6 +4093,12 @@ header .header-right {
   font-style: italic;
   font-weight: 700;
   font-size: 1rem;
+}
+
+.news-page .news-list .blog-item .item-body .btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
 }
 
 @media screen and (max-width: 991px) {

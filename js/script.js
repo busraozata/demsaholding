@@ -26,12 +26,37 @@ document.addEventListener("scroll", function () {
   }
 });
 
+$(function () {
+  $('a[href="#search"]').on("click", function (event) {
+    event.preventDefault();
+    $("#search").addClass("open");
+    $('#search > form > input[type="search"]').focus();
+  });
 
+  $("#search, #search button.close").on("click keyup", function (event) {
+    if (
+      event.target == this ||
+      event.target.className == "close" ||
+      event.keyCode == 27
+    ) {
+      $(this).removeClass("open");
+    }
+  });
+
+  $("form").submit(function (event) {
+    event.preventDefault();
+    return false;
+  });
+});
 
 var mySwiperCurrent = new Swiper(".mySwiperCurrent", {
   navigation: {
     nextEl: "#swiper-button-next1",
     prevEl: "#swiper-button-prev1",
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
   breakpoints: {
     640: {
@@ -63,6 +88,10 @@ var mySwiperNews = new Swiper(".mySwiperNews", {
   navigation: {
     nextEl: "#swiper-button-next3",
     prevEl: "#swiper-button-prev3",
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
   breakpoints: {
     640: {
@@ -97,6 +126,10 @@ var mySwiperNews = new Swiper(".mySwiperNews", {
 });
 
 var swiperServiceSlide = new Swiper(".swiperServiceSlide", {
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: "#swiper-button-nextService",
     prevEl: "#swiper-button-prevService",
@@ -104,6 +137,10 @@ var swiperServiceSlide = new Swiper(".swiperServiceSlide", {
 });
 
 var mySwiperLastBlog = new Swiper(".mySwiperLastBlog", {
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -130,6 +167,10 @@ const slideCount = slides.length;
 console.log("iki", slideCount);
 fraction.innerHTML = `<span class="start-count"> 01</span> <span class="counter-length">0${slideCount}</span>`;
 var swiperBanner = new Swiper(".mySwiperBanner", {
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   navigation: {
     nextEl: "#swiper-button-next1",
     prevEl: "#swiper-button-prev1",
@@ -196,25 +237,3 @@ $(window).on("resize scroll", function () {
 });
 
 
-$(function() {
-  $('a[href="#search"]').on("click", function(event) {
-    event.preventDefault();
-    $("#search").addClass("open");
-    $('#search > form > input[type="search"]').focus();
-  });
-
-  $("#search, #search button.close").on("click keyup", function(event) {
-    if (
-      event.target == this ||
-      event.target.className == "close" ||
-      event.keyCode == 27
-    ) {
-      $(this).removeClass("open");
-    }
-  });
-
-  $("form").submit(function(event) {
-    event.preventDefault();
-    return false;
-  });
-});

@@ -98,11 +98,29 @@
                                     <a class="nav-link" aria-current="page" href="contact.html">İletişim <i class="fa-sharp fa-solid fa-chevron-down"></i></a>
                                 </li>
                             </ul>
+                            <div class="search search-mobil d-lg-none d-block">
+                                <!--  <i class=" fa-solid fa-magnifying-glass"></i> -->
+                                <a href="#search">
+                                    <img src="./img/search.png" class="img-fluid" alt="">
+                                </a>
+
+                            </div>
+                            <div class="language language-mobil d-lg-none d-block">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        ING
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">TR</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="header-right d-lg-flex align-items-center gap-3 d-none">
 
-                        <div class="language">
+                        <div class="language d-lg-block d-none">
                             <div class="dropdown">
                                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     ING
@@ -113,16 +131,25 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="search">
+                        <div class="search d-lg-block d-none">
                             <!--  <i class=" fa-solid fa-magnifying-glass"></i> -->
-                            <img src="./img/search.png" class="img-fluid" alt="">
+                            <a href="#search">
+                                <img src="./img/search.png" class="img-fluid" alt="">
+                            </a>
+
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
     </header>
-
+    <div id="search">
+        <button type="button" class="close">×</button>
+        <form>
+            <input type="search" value="" placeholder="Bir kelime ara..." />
+            <button type="submit" class="btn">Ara</button>
+        </form>
+    </div>
     <section class="sub-banner" style="background-color: black;">
         <div class="top-menu">
             <div class="container-fluid">

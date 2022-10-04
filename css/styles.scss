@@ -236,32 +236,38 @@ a {
     transform: translate(0px, -100%) scale(0, 0);
     opacity: 0;
     z-index: 9999999;
-    input[type="search"] {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        color: rgb(255, 255, 255);
-        background: rgba(0, 0, 0, 0.87);
-        font-size: 60px;
-        font-weight: 300;
-        text-align: center;
-        border: 0px;
-        margin: 0px auto;
-        margin-top: -51px;
-        padding-left: 30px;
-        padding-right: 30px;
-        outline: none;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .btn {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: 61px;
-        margin-left: -45px;
-        border: white;
-        color: var(--color-white);
-        border: 1px solid var(--color-white);
+    form {
+        text-align: center;
+        input[type="search"] {
+            width: 100%;
+            color: rgb(255, 255, 255);
+            background: rgba(0, 0, 0, 0.87);
+            font-size: 3rem;
+            font-weight: 300;
+            text-align: center;
+            border: 0px;
+            margin: 0px auto;
+            outline: none;
+            @media screen and(max-width:$lg-breakpoint) {
+                font-size: 1.5rem;
+            }
+        }
+        .btn {
+            border: var(--color-white);
+            color: var(--color-white);
+            border: 1px solid var(--color-white);
+            margin-top: 2rem;
+            border-radius: 0;
+            padding: 0.5rem 2rem;
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+        }
     }
 
     .close {
@@ -341,6 +347,10 @@ header {
                 filter: invert(9);
             }
             .search {
+                &.search-mobil {
+                    padding-left: 1rem;
+                    margin-top: 1rem;
+                }
                 i {
                     color: var(--color-black);
                 }
@@ -444,6 +454,12 @@ header {
     }
 
     .language {
+        &.language-mobil{
+            margin-top: 1rem;
+            .dropdown-menu{
+                margin-left: 0.5rem;
+            }
+        }
         button {
             &:focus {
                 box-shadow: none;
@@ -1314,6 +1330,9 @@ header {
                         font-style: italic;
                         font-size: 1.6rem;
                         margin-bottom: 1.5rem;
+                        @media screen and(max-width:$sm-breakpoint) {
+                            font-size: 1.3rem;
+                        }
                     }
 
                     p {
@@ -1335,6 +1354,7 @@ header {
 
                         &:focus {
                             box-shadow: none;
+                            outline: none;
                         }
 
                         i {
@@ -1675,6 +1695,7 @@ header {
 
             &:focus {
                 box-shadow: none;
+                outline: none;
             }
 
             i {
@@ -1799,6 +1820,7 @@ header {
 
                             &:focus {
                                 box-shadow: none;
+                                outline: none;
                             }
                         }
                     }
@@ -2031,6 +2053,7 @@ header {
                     font-size: 1rem;
                     &:focus {
                         box-shadow: none;
+                        outline: none;
                     }
 
                     &:hover {
@@ -2182,6 +2205,7 @@ header {
 
             &:focus {
                 box-shadow: none;
+                outline: none;
             }
 
             i {
@@ -2222,6 +2246,7 @@ header {
 
             &:focus {
                 box-shadow: none;
+                outline: none;
             }
             @media screen and(max-width:$xl-breakpoint) {
                 background-color: var(--color-white);
@@ -2615,6 +2640,10 @@ header {
                     i {
                         margin-left: 0.8rem;
                     }
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                    }
                 }
             }
             &:nth-child(2n + 0) {
@@ -2989,6 +3018,7 @@ header {
 
                                 &:focus {
                                     box-shadow: none;
+                                    outline: none;
                                 }
                             }
                         }
@@ -3145,6 +3175,10 @@ header {
                     font-style: italic;
                     font-weight: 700;
                     font-size: 1rem;
+                    &:focus {
+                        box-shadow: none;
+                        outline: none;
+                    }
                     @media screen and(max-width:$lg-breakpoint) {
                         padding: 0.5rem 1rem;
                         font-size: 0.9rem;
