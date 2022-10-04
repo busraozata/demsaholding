@@ -1036,6 +1036,9 @@ header {
         @media screen and(max-width:1440px) {
             padding: 1rem 2rem;
         }
+        @media screen and(max-width:$lg-breakpoint) {
+            padding: 1rem 0.5rem;
+        }
         ul {
             li {
                 &:first-child {
@@ -1062,7 +1065,7 @@ header {
             padding: 3rem 2rem;
         }
         @media screen and(max-width:$lg-breakpoint) {
-            padding: 2rem 1rem;
+            padding: 2rem 0.5rem;
         }
         &::before {
             content: "";
@@ -1083,7 +1086,7 @@ header {
                 font-weight: 600;
                 font-size: 2.5rem;
                 @media screen and(max-width:$lg-breakpoint) {
-                    font-size: 2rem;
+                    font-size: 1.6rem;
                 }
             }
             .text {
@@ -1192,6 +1195,9 @@ header {
             .accordion-button {
                 color: var(--color-red);
                 padding: 0.5rem 0.4rem;
+            }
+            .accordion-button::after{
+                filter: invert(9);
             }
             .accordion-button:not(.collapsed) {
                 background-color: transparent;
@@ -1559,7 +1565,7 @@ header {
     }
 
     @media screen and(max-width:$lg-breakpoint) {
-        padding: 1rem;
+        padding: 2rem 1rem 1rem 1rem;
     }
     .title {
         position: relative;
@@ -1574,7 +1580,7 @@ header {
                 font-size: 2rem;
             }
             @media screen and(max-width:$sm-breakpoint) {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
             }
         }
 
@@ -1629,7 +1635,7 @@ header {
         padding: 3rem 2rem;
     }
     @media screen and(max-width:$lg-breakpoint) {
-        padding: 2.5rem 1rem !important;
+        padding: 0rem 1rem 2.5rem 1rem !important;
     }
     .content {
         h6 {
@@ -2251,6 +2257,9 @@ header {
             @media screen and(max-width:$xl-breakpoint) {
                 background-color: var(--color-white);
                 color: var(--color-red);
+            }
+            @media screen and(max-width:$sm-breakpoint) {
+                padding: 0.5rem 1.5rem;
             }
         }
     }

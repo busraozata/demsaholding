@@ -1191,6 +1191,12 @@ header .header-right {
   }
 }
 
+@media screen and (max-width: 991px) {
+  .sub-banner .top-menu {
+    padding: 1rem 0.5rem;
+  }
+}
+
 .sub-banner .top-menu ul li:first-child a {
   color: var(--color-light-red);
 }
@@ -1219,7 +1225,7 @@ header .header-right {
 
 @media screen and (max-width: 991px) {
   .sub-banner .sub-banner-area {
-    padding: 2rem 1rem;
+    padding: 2rem 0.5rem;
   }
 }
 
@@ -1248,7 +1254,7 @@ header .header-right {
 
 @media screen and (max-width: 991px) {
   .sub-banner .sub-banner-area .content h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -1381,6 +1387,11 @@ header .header-right {
 .fields #myTabContent .accordion-item .accordion-button {
   color: var(--color-red);
   padding: 0.5rem 0.4rem;
+}
+
+.fields #myTabContent .accordion-item .accordion-button::after {
+  -webkit-filter: invert(9);
+          filter: invert(9);
 }
 
 .fields #myTabContent .accordion-item .accordion-button:not(.collapsed) {
@@ -1868,7 +1879,7 @@ header .header-right {
 
 @media screen and (max-width: 991px) {
   .demsa-holding {
-    padding: 1rem;
+    padding: 2rem 1rem 1rem 1rem;
   }
 }
 
@@ -1897,7 +1908,7 @@ header .header-right {
 
 @media screen and (max-width: 600px) {
   .demsa-holding .title h3 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -1977,7 +1988,7 @@ header .header-right {
 
 @media screen and (max-width: 991px) {
   .our-projects {
-    padding: 2.5rem 1rem !important;
+    padding: 0rem 1rem 2.5rem 1rem !important;
   }
 }
 
@@ -2820,6 +2831,12 @@ header .header-right {
   .demsa-career .text-area .btn {
     background-color: var(--color-white);
     color: var(--color-red);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .demsa-career .text-area .btn {
+    padding: 0.5rem 1.5rem;
   }
 }
 
